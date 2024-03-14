@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1655297893578625373
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6961489969040503115}
+  m_Layer: 0
+  m_Name: TrampPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6961489969040503115
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655297893578625373}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.04, y: -0.48, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6377343360912624429}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2740280680662260435
 GameObject:
   m_ObjectHideFlags: 0
@@ -65,6 +96,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3189392480378331909}
+  - {fileID: 6961489969040503115}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7560997593729268294
@@ -193,9 +225,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80e4e5448381cd84fabafb8b75f0044d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dashForce: 10
+  dashDuration: 0.25
+  canMove: 1
+  knockbackeForce: 5
+  knockbackDuration: 0.25
   moveSpeed: 4
   groundPoint: {fileID: 3189392480378331909}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
   jumpForce: 5
+  Tramp: {fileID: 7746099944647808515, guid: 4344e1475b65f254c9c80e7673464a1a, type: 3}
+  trampPoint: {fileID: 6961489969040503115}

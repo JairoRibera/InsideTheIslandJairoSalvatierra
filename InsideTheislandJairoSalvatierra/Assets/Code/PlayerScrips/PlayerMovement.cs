@@ -4,24 +4,43 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public float dashForce;
+    public float dashDuration = 0.25f;
+    public bool canMove = true;
+    private float input;
+    public float knockbackeForce = 5f;
+    public float knockbackDuration = .25f;
     public float moveSpeed;
-    private Rigidbody2D _rb;
+    private Rigidbody2D _rB;
     private bool _isGrounded;
     public Transform groundPoint;
     public LayerMask whatIsGround;
     public float jumpForce;
-    public float knockBackLength; 
-    private float _knockBackCounter; 
+    public GameObject Tramp;
+    public Transform trampPoint;
     // Start is called before the first frame update
     void Start()
     {
-        _rb = GetComponent<Rigidbody2D>();
+        _rB = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        _rb.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed, _rb.velocity.y);
+        input = Input.GetAxisRaw("Horizontal");
+        if (input != 0f)
+        {
+            if (input > 0f)
+            {
+                transform.eulerAngles = new Vector2(0, 0);
+            }
+            
+            else
+            {
+                transform.eulerAngles = new Vector2(0, 180);
+            }
+        }
+        
         _isGrounded = Physics2D.OverlapCircle(groundPoint.position, .2f, whatIsGround);
 
         //Si pulsamos el botón de salto
@@ -31,11 +50,85 @@ public class PlayerMovement : MonoBehaviour
             if (_isGrounded)
             {
                 //El jugador salta, manteniendo su velocidad en X, y aplicamos la fuerza de salto
-                _rb.velocity = new Vector2(_rb.velocity.x, jumpForce);
+                _rB.velocity = new Vector2(_rB.velocity.x, jumpForce);
                 
             }
-           
+        }
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            Dash();
+        }
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            putTramp();
+        }
+        
+    }
+    private void FixedUpdate()
+    {
+        if (canMove == true)
+        {
+            _rB.velocity = new Vector2(input * moveSpeed, _rB.velocity.y);
+
         }
     }
-    
+    void Dash()
+    {
+        if (_isGrounded)
+        {
+            canMove = false;
+            _rB.velocity = new Vector2(0, _rB.velocity.y);
+            _rB.AddForce(transform.right * dashForce, ForceMode2D.Impulse);
+            StartCoroutine(CRT_CancelDash());
+        }
+        
+    }
+    IEnumerator CRT_CancelDash()
+    {
+        //Esto cancela el movimiento mientras estamos haciendo el dash
+        yield return new WaitForSeconds(dashDuration);
+        canMove = true;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.collider.CompareTag("Enemy") == true)
+        {
+            //Se puede acceder a la posicion en x del objeto contra el que ha chocado usando el collision.collider
+            ApplyKnockback(collision.collider.transform.position.x);
+        }
+
+
+    }
+    void ApplyKnockback(float _xPosition)
+    {
+        canMove = false;
+        //Hacemos que la velocidad en X sea 
+        _rB.velocity = new Vector2(0, _rB.velocity.y);
+        //Dependiendo de si el objeto esta en la derecha o izquierda añadira un empujon en otra direccion
+        if (transform.position.x < _xPosition)
+        {
+            _rB.AddForce(new Vector2(-1, 0.75f) * knockbackeForce, ForceMode2D.Impulse);
+        }
+        else
+        {
+            _rB.AddForce(new Vector2(1, 0.75f) * knockbackeForce, ForceMode2D.Impulse);
+        }
+
+        StartCoroutine(CRT_CancelKnockbak());
+    }
+
+    IEnumerator CRT_CancelKnockbak()
+    {
+        yield return new WaitForSeconds(knockbackDuration);
+        canMove = true;
+    }
+    private void putTramp()
+    {
+        Instantiate(Tramp, trampPoint.transform.position, trampPoint.transform.rotation);
+    }
+    private void bulletShoot()
+    {
+
+    }
+
 }
