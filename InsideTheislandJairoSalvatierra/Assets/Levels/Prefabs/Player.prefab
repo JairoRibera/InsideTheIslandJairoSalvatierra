@@ -201,7 +201,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -230,11 +230,11 @@ MonoBehaviour:
   canMove: 1
   knockbackeForce: 5
   knockbackDuration: 0.25
-  moveSpeed: 4
+  moveSpeed: 7
   groundPoint: {fileID: 3189392480378331909}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
-  jumpForce: 5
+  jumpForce: 8
   Tramp: {fileID: 7746099944647808515, guid: 4344e1475b65f254c9c80e7673464a1a, type: 3}
   trampPoint: {fileID: 6961489969040503115}
