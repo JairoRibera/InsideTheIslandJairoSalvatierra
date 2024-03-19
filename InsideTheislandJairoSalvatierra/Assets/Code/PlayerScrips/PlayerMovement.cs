@@ -94,17 +94,16 @@ public class PlayerMovement : MonoBehaviour
         if (collision.collider.CompareTag("Enemy") == true)
         {
             //Se puede acceder a la posicion en x del objeto contra el que ha chocado usando el collision.collider
-            ApplyKnockback(collision.collider.transform.position.x);
+            ApplyKnockBack(collision.collider.transform.position.x);
         }
         if (collision.collider.CompareTag("Enemy2") == true)
         {
             //Se puede acceder a la posicion en x del objeto contra el que ha chocado usando el collision.collider
-            ApplyKnockback(collision.collider.transform.position.x);
+            ApplyKnockBack(collision.collider.transform.position.x);
         }
 
     }
-
-    void ApplyKnockback(float _xPosition)
+    public void ApplyKnockBack(float _xPosition)
     {
         canMove = false;
         //Hacemos que la velocidad en X sea 
@@ -122,7 +121,7 @@ public class PlayerMovement : MonoBehaviour
         StartCoroutine(CRT_CancelKnockbak());
     }
 
-    IEnumerator CRT_CancelKnockbak()
+    public IEnumerator CRT_CancelKnockbak()
     {
         yield return new WaitForSeconds(knockbackDuration);
         canMove = true;
