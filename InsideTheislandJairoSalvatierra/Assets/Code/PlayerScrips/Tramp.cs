@@ -5,6 +5,7 @@ using UnityEngine;
 public class Tramp : MonoBehaviour
 {
     public Rigidbody2D rb;
+    
     //Variable para nombre del enemigo
     string enemyName;
     private void OnTriggerEnter2D(Collider2D collision)
@@ -19,22 +20,18 @@ public class Tramp : MonoBehaviour
             //Iniciamos la Corrutina
             StartCoroutine(EnemyMoveCo());
         }
-        if (collision.CompareTag("Enemy2"))
-        {
-            collision.transform.position = transform.position;
-            collision.gameObject.GetComponent<EnemyPersecution>().debePerseguir = false;
-            collision.gameObject.GetComponent<EnemyPersecution>().enemySpeed = 0f;
-            enemyName = collision.gameObject.name;
-
-            StartCoroutine(EnemyPersecutionCo());
-        }
-
-    }
-
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
         
-    }
+        //if (collision.CompareTag("EnemyTramp"))
+        //{
+        //    collision.transform.position = transform.position;
+        //    collision.gameObject.GetComponent<EnemyPersecution>().debePerseguir = false;
+        //    collision.gameObject.GetComponent<EnemyPersecution>().enemySpeed = 0f;
+        //    enemyName = collision.gameObject.name;
+
+        //    StartCoroutine(EnemyPersecutionCo());
+        //}
+
+    }   
     private IEnumerator EnemyPersecutionCo()
     {
         yield return new WaitForSeconds(5f);

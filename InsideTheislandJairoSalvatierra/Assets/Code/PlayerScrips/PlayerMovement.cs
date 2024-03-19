@@ -96,9 +96,14 @@ public class PlayerMovement : MonoBehaviour
             //Se puede acceder a la posicion en x del objeto contra el que ha chocado usando el collision.collider
             ApplyKnockback(collision.collider.transform.position.x);
         }
-
+        if (collision.collider.CompareTag("Enemy2") == true)
+        {
+            //Se puede acceder a la posicion en x del objeto contra el que ha chocado usando el collision.collider
+            ApplyKnockback(collision.collider.transform.position.x);
+        }
 
     }
+
     void ApplyKnockback(float _xPosition)
     {
         canMove = false;

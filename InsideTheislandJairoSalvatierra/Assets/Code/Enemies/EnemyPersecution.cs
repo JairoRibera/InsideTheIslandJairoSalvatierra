@@ -11,10 +11,11 @@ public class EnemyPersecution : MonoBehaviour
     public Rigidbody2D rB;
     //public float distance;
     //public float distanceA;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
