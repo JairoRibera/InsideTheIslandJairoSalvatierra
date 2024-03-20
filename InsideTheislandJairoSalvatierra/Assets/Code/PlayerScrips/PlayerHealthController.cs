@@ -38,14 +38,14 @@ public class PlayerHealthController : MonoBehaviour
             if(currentHealth <= 0)
             {
                 currentHealth = 0;
-                _lReference.RespawnPlayer();
+                //_lReference.RespawnPlayer();
             }
             else
             {
                 _invencibleCounter = invencibleLength;
                 _pMReference.ApplyKnockBack(transform.position.x);
             }
-            _uIReference.UpdateHealthDisplay();
+            //_uIReference.UpdateHealthDisplay();
         }
     }
     public void HealPlayer()

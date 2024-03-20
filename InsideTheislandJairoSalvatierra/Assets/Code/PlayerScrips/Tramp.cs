@@ -37,7 +37,7 @@ public class Tramp : MonoBehaviour
         yield return new WaitForSeconds(5f);
         Destroy(gameObject);
         GameObject.Find(enemyName).GetComponent<EnemyPersecution>().debePerseguir = true;
-        GameObject.Find(enemyName).GetComponent<EnemyPersecution>().enemySpeed = 2f;
+        GameObject.Find(enemyName).GetComponent<EnemyPersecution>().enemySpeed = 5f;
     }
     private IEnumerator EnemyMoveCo()
     {

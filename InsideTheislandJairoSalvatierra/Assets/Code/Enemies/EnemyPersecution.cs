@@ -15,7 +15,7 @@ public class EnemyPersecution : MonoBehaviour
         distance = (player.transform.position - transform.position).magnitude;
 
         if (debePerseguir == true)
-        {
+        { 
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, enemySpeed * Time.deltaTime);
         }
         if (distance > 0)
