@@ -172,9 +172,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b9e5a4ab01617247b95f1efea27fedb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 4538049122099341276, guid: ad53d00201b9de442895aee70f63e5d0, type: 3}
+  player: {fileID: 0}
   debePerseguir: 0
-  enemySpeed: 2
+  enemySpeed: 5
   rB: {fileID: 3710604127360710674}
   distance: 4
 --- !u!61 &9117263230607019824

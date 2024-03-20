@@ -539,7 +539,6 @@ GameObject:
   - component: {fileID: 846189197}
   - component: {fileID: 846189196}
   - component: {fileID: 846189200}
-  - component: {fileID: 846189201}
   m_Layer: 0
   m_Name: EnemyV
   m_TagString: Enemy
@@ -671,18 +670,6 @@ MonoBehaviour:
   distanceToAttacPlayer: 7
   chaseSpeed: 5
   waitAfterAttack: 0.2
---- !u!114 &846189201
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 846189195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 51e9c81cda3faa440ad932643978ae96, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1104305848
 GameObject:
   m_ObjectHideFlags: 0
@@ -1183,7 +1170,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3852964994644688184, guid: 9a8ad7f6c49f00f4d8ee35e917b8ef6b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1358,14 +1346,6 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 702310872}
-    - target: {fileID: 5977529131809187774, guid: cb6d4438ea0278646b3927cce2e490dc, type: 3}
-      propertyPath: enemySpeed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5977529131809187774, guid: cb6d4438ea0278646b3927cce2e490dc, type: 3}
-      propertyPath: debePerseguir
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
