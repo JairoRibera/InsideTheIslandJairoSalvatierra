@@ -959,8 +959,8 @@ GameObject:
   - component: {fileID: 1155750563}
   - component: {fileID: 1155750562}
   - component: {fileID: 1155750561}
-  - component: {fileID: 1155750566}
   - component: {fileID: 1155750567}
+  - component: {fileID: 1155750568}
   m_Layer: 0
   m_Name: Enemy2
   m_TagString: Enemy2
@@ -1024,7 +1024,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1108,8 +1108,25 @@ Transform:
   - {fileID: 1557270809}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &1155750566
-CircleCollider2D:
+--- !u!114 &1155750567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155750560}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b9e5a4ab01617247b95f1efea27fedb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 143031006}
+  debePerseguir: 0
+  enemySpeed: 2
+  rB: {fileID: 1155750561}
+  distance: 4
+--- !u!61 &1155750568
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -1137,28 +1154,22 @@ CircleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   serializedVersion: 2
-  m_Radius: 5.26
---- !u!114 &1155750567
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1155750560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b9e5a4ab01617247b95f1efea27fedb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 143031006}
-  debePerseguir: 0
-  enemySpeed: 2
-  rB: {fileID: 1155750561}
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &1176477155
 GameObject:
   m_ObjectHideFlags: 0

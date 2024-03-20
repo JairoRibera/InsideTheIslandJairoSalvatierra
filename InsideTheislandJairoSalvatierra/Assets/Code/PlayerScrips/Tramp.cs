@@ -19,17 +19,17 @@ public class Tramp : MonoBehaviour
             enemyName = collision.gameObject.name;
             //Iniciamos la Corrutina
             StartCoroutine(EnemyMoveCo());
+           
         }
-        
-        //if (collision.CompareTag("EnemyTramp"))
-        //{
-        //    collision.transform.position = transform.position;
-        //    collision.gameObject.GetComponent<EnemyPersecution>().debePerseguir = false;
-        //    collision.gameObject.GetComponent<EnemyPersecution>().enemySpeed = 0f;
-        //    enemyName = collision.gameObject.name;
+        if (collision.CompareTag("Enemy2"))
+        {
+            collision.transform.position = transform.position;
+            collision.gameObject.GetComponent<EnemyPersecution>().debePerseguir = false;
+            collision.gameObject.GetComponent<EnemyPersecution>().enemySpeed = 0f;
+            enemyName = collision.gameObject.name;
 
-        //    StartCoroutine(EnemyPersecutionCo());
-        //}
+            StartCoroutine(EnemyPersecutionCo());
+        }
 
     }   
     private IEnumerator EnemyPersecutionCo()
