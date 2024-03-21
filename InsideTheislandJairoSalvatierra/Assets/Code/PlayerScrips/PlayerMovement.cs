@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce;
     public GameObject Tramp;
     public Transform trampPoint;
+    public bool canInteract = false;
     // Start is called before the first frame update
     void Start()
     {

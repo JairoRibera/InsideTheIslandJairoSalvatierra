@@ -8,6 +8,10 @@ public class Tramp : MonoBehaviour
     
     //Variable para nombre del enemigo
     string enemyName;
+    public void Update()
+    {
+        
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Enemy"))
@@ -47,5 +51,5 @@ public class Tramp : MonoBehaviour
         //buscamos el objeto con el nombre de la variable y hacemos que pueda moverse
         GameObject.Find(enemyName).GetComponent<EnemiesController>().canMove = true;
     }
-   
+   //private 
 }
