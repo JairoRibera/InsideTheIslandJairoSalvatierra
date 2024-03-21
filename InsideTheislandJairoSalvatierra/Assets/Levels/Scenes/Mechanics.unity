@@ -154,6 +154,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &118020636 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5661602295278569178, guid: ad53d00201b9de442895aee70f63e5d0, type: 3}
+  m_PrefabInstance: {fileID: 6580163725721388580}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &353689017 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6377343360912624429, guid: ad53d00201b9de442895aee70f63e5d0, type: 3}
@@ -1931,6 +1936,18 @@ PrefabInstance:
     - target: {fileID: 6377343360912624429, guid: ad53d00201b9de442895aee70f63e5d0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6538004535176312296, guid: ad53d00201b9de442895aee70f63e5d0, type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 1284732660789478771, guid: fd126b58c255a6e4dbbd59da393e80f1, type: 3}
+    - target: {fileID: 6538004535176312296, guid: ad53d00201b9de442895aee70f63e5d0, type: 3}
+      propertyPath: bulletPoint
+      value: 
+      objectReference: {fileID: 118020636}
+    - target: {fileID: 6538004535176312296, guid: ad53d00201b9de442895aee70f63e5d0, type: 3}
+      propertyPath: bulletSpeed
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

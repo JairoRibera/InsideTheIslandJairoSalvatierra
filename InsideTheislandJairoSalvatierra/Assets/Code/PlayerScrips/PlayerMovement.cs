@@ -19,6 +19,9 @@ public class PlayerMovement : MonoBehaviour
     public GameObject Tramp;
     public Transform trampPoint;
     public bool canInteract = false;
+    public GameObject bullet;
+    public Transform bulletPoint;
+    public float bulletSpeed;
     // Start is called before the first frame update
     void Start()
     {
@@ -63,6 +66,8 @@ public class PlayerMovement : MonoBehaviour
         {
             putTramp();
         }
+        if (Input.GetKeyDown(KeyCode.K))
+            bulletShoot();
         
     }
     private void FixedUpdate()
@@ -129,11 +134,13 @@ public class PlayerMovement : MonoBehaviour
     }
     private void putTramp()
     {
-        Instantiate(Tramp, trampPoint.transform.position, trampPoint.transform.rotation);
+        if (_isGrounded)
+            Instantiate(Tramp, trampPoint.transform.position, trampPoint.transform.rotation);
     }
+
     private void bulletShoot()
     {
-
+        Instantiate(bullet, bulletPoint.transform.position, bulletPoint.rotation);
     }
 
 }
