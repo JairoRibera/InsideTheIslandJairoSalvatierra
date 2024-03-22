@@ -34,6 +34,15 @@ public class Tramp : MonoBehaviour
 
             StartCoroutine(EnemyPersecutionCo());
         }
+        if (collision.CompareTag("EnemyRun"))
+        {
+            collision.transform.position = transform.position;
+            collision.gameObject.GetComponent<EnemyRun>().debeHuir = false;
+            collision.gameObject.GetComponent<EnemyRun>().enemySpeed = 0f;
+            enemyName = collision.gameObject.name;
+
+            StartCoroutine(EnemyRunCo());
+        }
 
     }   
     private IEnumerator EnemyPersecutionCo()
@@ -51,5 +60,12 @@ public class Tramp : MonoBehaviour
         //buscamos el objeto con el nombre de la variable y hacemos que pueda moverse
         GameObject.Find(enemyName).GetComponent<EnemiesController>().canMove = true;
     }
-   //private 
+   private IEnumerator EnemyRunCo()
+    {
+        yield return new WaitForSeconds(5f);
+        Destroy(gameObject);
+        GameObject.Find(enemyName).GetComponent<EnemyRun>().debeHuir = true;
+        GameObject.Find(enemyName).GetComponent<EnemyRun>().enemySpeed = 4f;
+
+    } 
 }
