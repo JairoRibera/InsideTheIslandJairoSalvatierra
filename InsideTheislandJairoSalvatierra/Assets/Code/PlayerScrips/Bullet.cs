@@ -9,18 +9,18 @@ public class Bullet : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (CompareTag("bullet"))
-        {
-            _rB.velocity = new Vector2(bulletSpeed, 0f);
-        }
+        //if (CompareTag("bullet"))
+        //{
+        //    _rB.velocity = new Vector2(bulletSpeed, 0f);
+        //}
     }
     private void OnBecameInvisible()
     {
         Destroy(gameObject);
     }
     // Update is called once per frame
-    void Update()
+   private void Update()
     {
-        
+        transform.Translate(Vector2.right * bulletSpeed * Time.deltaTime);
     }
 }
