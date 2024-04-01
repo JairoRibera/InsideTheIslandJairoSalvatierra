@@ -10,7 +10,7 @@ public class Tramp : MonoBehaviour
     string enemyName;
     public void Update()
     {
-        
+        StartCoroutine(EliminateTramp());
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -68,4 +68,9 @@ public class Tramp : MonoBehaviour
         GameObject.Find(enemyName).GetComponent<EnemyRun>().enemySpeed = 4f;
 
     } 
+    private IEnumerator EliminateTramp()
+    {
+        yield return new WaitForSeconds(5f);
+        Destroy(gameObject);
+    }
 }
