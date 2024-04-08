@@ -268,7 +268,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
-  jumpForce: 10
+  jumpForce: 8
   Tramp: {fileID: 7746099944647808515, guid: 4344e1475b65f254c9c80e7673464a1a, type: 3}
   trampPoint: {fileID: 6961489969040503115}
   canInteract: 0

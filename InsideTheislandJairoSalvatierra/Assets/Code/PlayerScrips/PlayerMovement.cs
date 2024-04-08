@@ -141,6 +141,7 @@ public class PlayerMovement : MonoBehaviour
     private void bulletShoot()
     {
         Instantiate(bullet, bulletPoint.transform.position, bulletPoint.rotation);
+        
     }
 
 }
