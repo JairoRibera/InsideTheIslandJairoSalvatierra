@@ -6,6 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public float bulletSpeed = 2f;
     public Rigidbody2D _rB;
+    public float damage;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,5 +23,15 @@ public class Bullet : MonoBehaviour
    private void Update()
     {
         transform.Translate(Vector2.right * bulletSpeed * Time.deltaTime);
+    }
+    //private void OnTriggerEnter2D(Collider other)
+    //{
+    //    if (other.CompareTag("Enemy"))
+    //        other.GetComponent<EnemyDeath>().damageEnemy(damage);
+    //}
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy"))
+            collision.GetComponent<EnemyDeath>().damageEnemy(damage);
     }
 }

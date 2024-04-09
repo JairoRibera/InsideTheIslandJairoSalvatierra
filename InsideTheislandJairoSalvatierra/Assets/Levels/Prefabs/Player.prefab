@@ -275,6 +275,7 @@ MonoBehaviour:
   bullet: {fileID: 1284732660789478771, guid: fd126b58c255a6e4dbbd59da393e80f1, type: 3}
   bulletPoint: {fileID: 5661602295278569178}
   bulletSpeed: 2
+  cooldownTime: 0.25
 --- !u!114 &6987653988925517309
 MonoBehaviour:
   m_ObjectHideFlags: 0

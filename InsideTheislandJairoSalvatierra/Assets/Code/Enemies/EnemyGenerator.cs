@@ -11,6 +11,8 @@ public class EnemyGenerator : MonoBehaviour
     public GameObject enemyRun;
     public bool debeHuir;
     public int numberOfEnemies = 1;
+    public float cooldownTime;
+    float lastEnemy;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,13 +35,10 @@ public class EnemyGenerator : MonoBehaviour
     {
         if (generateEnemy == true)
         {
-            StartCoroutine(timeToGenerate());
+            if (Time.time - lastEnemy < cooldownTime)
+                return;
+            lastEnemy = Time.time;
+            Instantiate(enemyRun, point.transform.position, point.transform.rotation);
         }
-    }
-    public IEnumerator timeToGenerate()
-    {
-        yield return new WaitForSeconds(10f);
-        Instantiate(enemyRun, point.transform.position, point.transform.rotation);
-        new WaitForSeconds(10f);
     }
 }

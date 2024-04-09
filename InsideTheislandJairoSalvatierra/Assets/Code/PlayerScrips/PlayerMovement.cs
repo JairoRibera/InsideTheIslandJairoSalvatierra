@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
     public GameObject bullet;
     public Transform bulletPoint;
     public float bulletSpeed;
+    public float cooldownTime;
+    float lastShoot;
     // Start is called before the first frame update
     void Start()
     {
@@ -67,7 +69,11 @@ public class PlayerMovement : MonoBehaviour
             putTramp();
         }
         if (Input.GetKeyDown(KeyCode.K))
+        {
             bulletShoot();
+            
+        }
+            
         
     }
     private void FixedUpdate()
@@ -135,13 +141,21 @@ public class PlayerMovement : MonoBehaviour
     private void putTramp()
     {
         if (_isGrounded)
+        {
+            //StartCoroutine(CooldownCo());
             Instantiate(Tramp, trampPoint.transform.position, trampPoint.transform.rotation);
+
+        }
+            
     }
 
     private void bulletShoot()
     {
+        if (Time.time - lastShoot < cooldownTime)
+            return;
+        lastShoot = Time.time;
         Instantiate(bullet, bulletPoint.transform.position, bulletPoint.rotation);
-        
     }
+    
 
 }
