@@ -1303,7 +1303,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1655985367
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1322,6 +1322,7 @@ MonoBehaviour:
   distance: 0
   enemyRun: {fileID: 3695996932182759272, guid: cb6d4438ea0278646b3927cce2e490dc, type: 3}
   debeHuir: 0
+  numberOfEnemies: 1
 --- !u!212 &1655985368
 SpriteRenderer:
   m_ObjectHideFlags: 0
