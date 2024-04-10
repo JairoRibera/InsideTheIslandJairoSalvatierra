@@ -105,6 +105,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00f5fb53f611e20419194c449031dd2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 6377343360912624429, guid: ad53d00201b9de442895aee70f63e5d0, type: 3}
+  target: {fileID: 0}
   minHeight: -2
   maxHeight: 4
+  farBackground: {fileID: 3476832842945902548, guid: 4f7141b2fed07d140a01be3fc0c47573, type: 3}
+  middleBackground: {fileID: 0}

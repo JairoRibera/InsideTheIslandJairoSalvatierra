@@ -292,3 +292,4 @@ MonoBehaviour:
   currentHealth: 0
   maxHealth: 3
   invencibleLength: 1
+  _lReference: {fileID: 7573519897303893988, guid: 855b669414236004cb36ce93a87e97e8, type: 3}

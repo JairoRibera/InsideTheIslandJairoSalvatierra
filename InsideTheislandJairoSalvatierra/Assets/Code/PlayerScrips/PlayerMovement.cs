@@ -161,5 +161,9 @@ public class PlayerMovement : MonoBehaviour
         Instantiate(bullet, bulletPoint.transform.position, bulletPoint.rotation);
     }
     
-
+    public IEnumerator powerJumpCO()
+    {
+        jumpForce = 15f;
+        yield return new WaitForSeconds(20);
+    }
 }

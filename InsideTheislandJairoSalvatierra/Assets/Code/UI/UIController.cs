@@ -9,12 +9,12 @@ public class UIController : MonoBehaviour
     public Image heart1, heart2, heart3;
     public Sprite heartFull, heartEmpty;
     private PlayerHealthController _pHReference;
-    private LevelManager _lMReference;
+    public LevelManager _lMReference;
     // Start is called before the first frame update
     void Start()
     {
         _pHReference = GameObject.Find("Player").GetComponent<PlayerHealthController>();
-        _lMReference = GameObject.Find("LevelManager").GetComponent<LevelManager>();
+        //_lMReference = GameObject.Find("LevelManager").GetComponent<LevelManager>();
     }
     public void UpdateHealthDisplay()
     {

@@ -9,23 +9,29 @@ public class LevelManager : MonoBehaviour
     public int coin;
     private PlayerMovement _pM;
     private CheckPointController _cReference;
+    private PlayerHealthController _pHReference;
+    private UIController _uIReference;
 
     // Start is called before the first frame update
     void Start()
     {
+        _pHReference = GameObject.Find("Player").GetComponent<PlayerHealthController>();
         _pM = GameObject.Find("Player").GetComponent<PlayerMovement>();
         _cReference = GameObject.Find("CheckPointController").GetComponent<CheckPointController>();
+        _uIReference = GameObject.Find("Canvas").GetComponent<UIController>();
     }
     public void RespawnPlayer()
     {
         StartCoroutine(RespawnPlayerCo());
     }
-    private IEnumerator RespawnPlayerCo()
+    public IEnumerator RespawnPlayerCo()
     {
         _pM.gameObject.SetActive(false);
         yield return new WaitForSeconds(waitToRespawn);
         _pM.gameObject.SetActive(true);
         _pM.transform.position = _cReference.spawnPoint;
+        _pHReference.currentHealth = _pHReference.maxHealth;
+        _uIReference.UpdateHealthDisplay();
 
     }
     public void ExitLevel()
