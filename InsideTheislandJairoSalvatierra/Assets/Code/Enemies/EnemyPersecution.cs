@@ -4,19 +4,24 @@ using UnityEngine;
 
 public class EnemyPersecution : MonoBehaviour
 {
-    public GameObject player;
+    public GameObject _player;
     public bool debePerseguir;
-    public float enemySpeed;
+    public float enemySpeed = 5f;
     public Rigidbody2D rB;
     public float distance;
+    public void Start()
+    {
+        _player = GameObject.Find("Player");
+    }
     // Update is called once per frame
     void Update()
     {
-        distance = (player.transform.position - transform.position).magnitude;
+        
+        distance = (_player.transform.position - transform.position).magnitude;
 
         if (debePerseguir == true)
         { 
-            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, enemySpeed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, _player.transform.position, enemySpeed * Time.deltaTime);
         }
         if (distance > 0)
         {

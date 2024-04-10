@@ -23,7 +23,8 @@ public class Tramp : MonoBehaviour
             enemyName = collision.gameObject.name;
             //Iniciamos la Corrutina
             StartCoroutine(EnemyMoveCo());
-           
+            
+
         }
         if (collision.CompareTag("Enemy2"))
         {
@@ -31,8 +32,9 @@ public class Tramp : MonoBehaviour
             collision.gameObject.GetComponent<EnemyPersecution>().debePerseguir = false;
             collision.gameObject.GetComponent<EnemyPersecution>().enemySpeed = 0f;
             enemyName = collision.gameObject.name;
-
             StartCoroutine(EnemyPersecutionCo());
+            
+
         }
         if (collision.CompareTag("EnemyRun"))
         {
@@ -44,10 +46,10 @@ public class Tramp : MonoBehaviour
             StartCoroutine(EnemyRunCo());
         }
 
-    }   
+    }
     private IEnumerator EnemyPersecutionCo()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(4f);
         Destroy(gameObject);
         GameObject.Find(enemyName).GetComponent<EnemyPersecution>().debePerseguir = true;
         GameObject.Find(enemyName).GetComponent<EnemyPersecution>().enemySpeed = 5f;

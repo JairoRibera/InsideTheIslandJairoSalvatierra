@@ -24,6 +24,8 @@ public class PlayerMovement : MonoBehaviour
     public float bulletSpeed;
     public float cooldownTime;
     float lastShoot;
+    float lastTramp;
+    public float cooldownTimeTramp;
     // Start is called before the first frame update
     void Start()
     {
@@ -142,18 +144,20 @@ public class PlayerMovement : MonoBehaviour
     {
         if (_isGrounded)
         {
+            if (Time.time - lastShoot < cooldownTimeTramp)
+                return;
+            lastShoot = Time.time;
             //StartCoroutine(CooldownCo());
             Instantiate(Tramp, trampPoint.transform.position, trampPoint.transform.rotation);
-
         }
             
     }
 
     private void bulletShoot()
     {
-        if (Time.time - lastShoot < cooldownTime)
+        if (Time.time - lastTramp < cooldownTime)
             return;
-        lastShoot = Time.time;
+        lastTramp = Time.time;
         Instantiate(bullet, bulletPoint.transform.position, bulletPoint.rotation);
     }
     
