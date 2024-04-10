@@ -13,10 +13,11 @@ public class EnemyGenerator : MonoBehaviour
     public int numberOfEnemies = 1;
     public float cooldownTime;
     float lastEnemy;
+    int contador;
     // Start is called before the first frame update
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
@@ -33,12 +34,13 @@ public class EnemyGenerator : MonoBehaviour
     }
     public void GeneratorEnemy()
     {
-        if (generateEnemy == true)
+        if (generateEnemy == true && contador < 5)
         {
             if (Time.time - lastEnemy < cooldownTime)
                 return;
             lastEnemy = Time.time;
             Instantiate(enemyRun, point.transform.position, point.transform.rotation);
+            contador++;
         }
     }
 }
