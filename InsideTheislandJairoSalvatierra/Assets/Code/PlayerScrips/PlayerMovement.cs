@@ -160,10 +160,4 @@ public class PlayerMovement : MonoBehaviour
         lastTramp = Time.time;
         Instantiate(bullet, bulletPoint.transform.position, bulletPoint.rotation);
     }
-    
-    public IEnumerator powerJumpCO()
-    {
-        jumpForce = 15f;
-        yield return new WaitForSeconds(20);
-    }
 }
