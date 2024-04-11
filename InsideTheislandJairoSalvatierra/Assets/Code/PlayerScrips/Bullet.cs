@@ -33,5 +33,8 @@ public class Bullet : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
             collision.GetComponent<EnemyDeath>().damageEnemy(damage);
+        if (collision.CompareTag("Enemy2"))
+            collision.GetComponent<EnemyDeath>().damageEnemy(damage);
     }
+
 }

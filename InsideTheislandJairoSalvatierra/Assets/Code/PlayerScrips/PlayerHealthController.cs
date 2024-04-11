@@ -14,7 +14,7 @@ public class PlayerHealthController : MonoBehaviour
     public LevelManager _lReference;
     // Start is called before the first frame update
     void Start()
-    {
+    {  
         //_lReference = GameObject.Find("LevelManager").GetComponent<LevelManager>();
         _uIReference = GameObject.Find("Canvas").GetComponent<UIController>();
         _pMReference = GetComponent<PlayerMovement>();
