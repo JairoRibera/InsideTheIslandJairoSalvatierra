@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d26f49c8fe605414b8e85bc84f111cf4
+guid: ae5b81ba9b9ddc84c8784207d8c5ccd1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,34 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PowerUps 1_0
+      name: PowerUps_0
       rect:
         serializedVersion: 2
-        x: 850
-        y: 326
-        width: 60
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 267a81a0096287c428381bcc3eefb210
-      internalID: -338471805
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PowerUps 1_1
-      rect:
-        serializedVersion: 2
-        x: 750
-        y: 325
-        width: 80
-        height: 80
+        x: 735
+        y: 320
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,8 +124,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bd06ebcc2b923f349b1324483ce1f594
-      internalID: -1383594637
+      spriteID: b222375e3606ec242b7755237a3fb76c
+      internalID: -365283407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUps_1
+      rect:
+        serializedVersion: 2
+        x: 835
+        y: 320
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27708cf14bf4fe541b5b197d85fbc090
+      internalID: -1746806733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PowerUps_2
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 320
+        width: 100
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45fac38a3d1c13847bee498aa9c72ac7
+      internalID: 240221558
       vertices: []
       indices: 
       edges: []
@@ -162,8 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PowerUps 1_0: -338471805
-      PowerUps 1_1: -1383594637
+      PowerUps_0: -365283407
+      PowerUps_1: -1746806733
+      PowerUps_2: 240221558
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
