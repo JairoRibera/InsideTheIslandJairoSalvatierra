@@ -14,7 +14,8 @@ public class EnemyDeath : MonoBehaviour
     }
     public void EnemyDeathController()
     {
-        Destroy(gameObject);
+        gameObject.SetActive(false);
+        //Destroy(gameObject);
         //transform.gameObject.SetActive(false);
         //Instantiate(deathEffect, transform.GetChild(0).position, transform.GetChild(0).rotation);
     }

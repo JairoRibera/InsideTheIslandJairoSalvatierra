@@ -11,11 +11,12 @@ public class PlayerMovement : MonoBehaviour
     public float knockbackeForce = 5f;
     public float knockbackDuration = .25f;
     public float moveSpeed;
-    private Rigidbody2D _rB;
-    private bool _isGrounded;
+    public Rigidbody2D _rB;
+    public bool _isGrounded;
     public Transform groundPoint;
     public LayerMask whatIsGround;
     public float jumpForce;
+    public bool _canDoubleJump;
     public GameObject Tramp;
     public Transform trampPoint;
     public bool canInteract = false;
@@ -62,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
                 
             }
         }
+
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
             Dash();
