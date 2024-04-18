@@ -27,15 +27,23 @@ public class PlayerMovement : MonoBehaviour
     float lastShoot;
     float lastTramp;
     public float cooldownTimeTramp;
+    public PickUps pUReferenece;
+    private bool __isDead;
+
     // Start is called before the first frame update
     void Start()
     {
         _rB = GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        
+
+
+
         input = Input.GetAxisRaw("Horizontal");
         if (input != 0f)
         {
@@ -87,6 +95,8 @@ public class PlayerMovement : MonoBehaviour
             _rB.velocity = new Vector2(input * moveSpeed, _rB.velocity.y);
 
         }
+        StartCoroutine(pUReferenece.normalJumpCo());
+        //StartCoroutine(pUReferenece.normalShootCo());
     }
     void Dash()
     {

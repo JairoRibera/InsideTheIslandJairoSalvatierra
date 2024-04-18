@@ -20,12 +20,6 @@ public class PickUps : MonoBehaviour
         //_bReference = GameObject.Find("Bullet").GetComponent<Bullet>();
         _pMReference = GameObject.Find("Player").GetComponent<PlayerMovement>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player") && !_isCollected)
@@ -49,7 +43,6 @@ public class PickUps : MonoBehaviour
                 _pMReference.jumpForce = 15f;
                 _isCollected = true;
                 Destroy(gameObject);
-                StartCoroutine(normalJumpCo());
             }
             if (isPowerShoot)
             {
@@ -57,19 +50,18 @@ public class PickUps : MonoBehaviour
                 _bReference.bulletSpeed = 10f;
                 _isCollected = true;
                 Destroy(gameObject);
-                StartCoroutine(normalShootCo());
             }
 
         }
     }
-    IEnumerator normalJumpCo()
+    public IEnumerator normalJumpCo()
     {
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(7);
         _pMReference.jumpForce = 8f;
     }
-    IEnumerator normalShootCo()
+   public IEnumerator normalShootCo()
     {
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(10);
         _bReference.damage = 25f;
         _bReference.bulletSpeed = 10f;
     }
