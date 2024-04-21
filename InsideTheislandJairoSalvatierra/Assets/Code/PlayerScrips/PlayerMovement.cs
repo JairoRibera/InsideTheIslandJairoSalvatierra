@@ -95,7 +95,7 @@ public class PlayerMovement : MonoBehaviour
             _rB.velocity = new Vector2(input * moveSpeed, _rB.velocity.y);
 
         }
-        StartCoroutine(pUReferenece.normalJumpCo());
+        //StartCoroutine(pUReferenece.normalJumpCo());
         //StartCoroutine(pUReferenece.normalShootCo());
     }
     void Dash()

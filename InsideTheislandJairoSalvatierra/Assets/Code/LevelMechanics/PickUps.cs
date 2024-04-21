@@ -54,16 +54,16 @@ public class PickUps : MonoBehaviour
 
         }
     }
-    public IEnumerator normalJumpCo()
-    {
-        yield return new WaitForSeconds(7);
-        _pMReference.jumpForce = 8f;
-    }
-   public IEnumerator normalShootCo()
-    {
-        yield return new WaitForSeconds(10);
-        _bReference.damage = 25f;
-        _bReference.bulletSpeed = 10f;
-    }
+   // public IEnumerator normalJumpCo()
+   // {
+   //     yield return new WaitForSeconds(7);
+   //     _pMReference.jumpForce = 8f;
+   // }
+   //public IEnumerator normalShootCo()
+   // {
+   //     yield return new WaitForSeconds(10);
+   //     _bReference.damage = 25f;
+   //     _bReference.bulletSpeed = 10f;
+   // }
 
 }
