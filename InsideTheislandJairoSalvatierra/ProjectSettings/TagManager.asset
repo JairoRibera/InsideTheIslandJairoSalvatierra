@@ -9,6 +9,7 @@ TagManager:
   - EnemyTramp
   - bullet
   - EnemyRun
+  - PowerUp
   layers:
   - Default
   - TransparentFX

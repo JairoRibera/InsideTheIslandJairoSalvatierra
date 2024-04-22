@@ -46,7 +46,7 @@ public class PickUps : MonoBehaviour
             }
             if (isPowerShoot)
             {
-                _bReference.damage = 50f;
+                _bReference.damage = 20f;
                 _bReference.bulletSpeed = 10f;
                 _isCollected = true;
                 Destroy(gameObject);
@@ -54,16 +54,4 @@ public class PickUps : MonoBehaviour
 
         }
     }
-   // public IEnumerator normalJumpCo()
-   // {
-   //     yield return new WaitForSeconds(7);
-   //     _pMReference.jumpForce = 8f;
-   // }
-   //public IEnumerator normalShootCo()
-   // {
-   //     yield return new WaitForSeconds(10);
-   //     _bReference.damage = 25f;
-   //     _bReference.bulletSpeed = 10f;
-   // }
-
 }

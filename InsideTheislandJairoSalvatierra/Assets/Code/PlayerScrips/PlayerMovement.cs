@@ -29,11 +29,13 @@ public class PlayerMovement : MonoBehaviour
     public float cooldownTimeTramp;
     public PickUps pUReferenece;
     private bool __isDead;
+    public Bullet _bReference;
 
     // Start is called before the first frame update
     void Start()
     {
         _rB = GetComponent<Rigidbody2D>();
+
         
     }
 
@@ -171,5 +173,18 @@ public class PlayerMovement : MonoBehaviour
             return;
         lastTramp = Time.time;
         Instantiate(bullet, bulletPoint.transform.position, bulletPoint.rotation);
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("PowerUp"))
+        {
+            StartCoroutine(normalSJ());
+        }
+    }
+    private IEnumerator normalSJ()
+    {
+        yield return new WaitForSeconds(20);
+        jumpForce = 8f;
+        _bReference.damage = 10f;
     }
 }
