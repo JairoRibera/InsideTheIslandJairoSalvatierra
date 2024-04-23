@@ -7,6 +7,7 @@ public class Bullet : MonoBehaviour
     public float bulletSpeed = 10f;
     public Rigidbody2D _rB;
     public float damage;
+    private float lifetime = 0.75f;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,10 +15,7 @@ public class Bullet : MonoBehaviour
         //{
         //    _rB.velocity = new Vector2(bulletSpeed, 0f);
         //}
-    }
-    private void OnBecameInvisible()
-    {
-        Destroy(gameObject);
+        Destroy(gameObject, lifetime);
     }
     // Update is called once per frame
    private void Update()

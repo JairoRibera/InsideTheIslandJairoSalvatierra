@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class EnemyDeath : MonoBehaviour
 {
-    [SerializeField]private float vida;
+    public float vida;
+    public bool isLife;
     //public GameObject deathEffect;
     public void damageEnemy(float damage)
     {
@@ -19,5 +20,9 @@ public class EnemyDeath : MonoBehaviour
         //transform.gameObject.SetActive(false);
         //Instantiate(deathEffect, transform.GetChild(0).position, transform.GetChild(0).rotation);
     }
-    
+    public void estaVivo()
+    {
+        if (vida > 0)
+            isLife = true;
+    }
 }

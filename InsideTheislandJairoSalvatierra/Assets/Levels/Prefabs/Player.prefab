@@ -264,11 +264,14 @@ MonoBehaviour:
   knockbackeForce: 5
   knockbackDuration: 0.25
   moveSpeed: 7
+  _rB: {fileID: 0}
+  _isGrounded: 0
   groundPoint: {fileID: 3189392480378331909}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 64
   jumpForce: 8
+  _canDoubleJump: 0
   Tramp: {fileID: 7746099944647808515, guid: 4344e1475b65f254c9c80e7673464a1a, type: 3}
   trampPoint: {fileID: 6961489969040503115}
   canInteract: 0
@@ -277,6 +280,7 @@ MonoBehaviour:
   bulletSpeed: 2
   cooldownTime: 0.25
   cooldownTimeTramp: 1
+  _bReference: {fileID: 775515616529669243, guid: fd126b58c255a6e4dbbd59da393e80f1, type: 3}
 --- !u!114 &6987653988925517309
 MonoBehaviour:
   m_ObjectHideFlags: 0

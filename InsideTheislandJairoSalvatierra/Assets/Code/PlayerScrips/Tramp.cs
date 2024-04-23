@@ -5,6 +5,8 @@ using UnityEngine;
 public class Tramp : MonoBehaviour
 {
     public Rigidbody2D rb;
+    public bool isLife;
+    
     
     //Variable para nombre del enemigo
     string enemyName;
@@ -21,6 +23,7 @@ public class Tramp : MonoBehaviour
             collision.gameObject.GetComponent<EnemiesController>().rB.velocity = Vector2.zero;
             //Hacemos que la variable enemyName sea el nombre que esté en colision con la trampa
             enemyName = collision.gameObject.name;
+            collision.gameObject.GetComponent<EnemyDeath>().estaVivo();
             //Iniciamos la Corrutina
             StartCoroutine(EnemyMoveCo());
             
@@ -33,7 +36,7 @@ public class Tramp : MonoBehaviour
             collision.gameObject.GetComponent<EnemyPersecution>().enemySpeed = 0f;
             enemyName = collision.gameObject.name;
             StartCoroutine(EnemyPersecutionCo());
-            
+
 
         }
         if (collision.CompareTag("EnemyRun"))
@@ -42,8 +45,11 @@ public class Tramp : MonoBehaviour
             collision.gameObject.GetComponent<EnemyRun>().debeHuir = false;
             collision.gameObject.GetComponent<EnemyRun>().enemySpeed = 0f;
             enemyName = collision.gameObject.name;
-
+            collision.gameObject.GetComponent<EnemyDeath>().estaVivo();
             StartCoroutine(EnemyRunCo());
+
+
+
         }
 
     }
@@ -56,6 +62,7 @@ public class Tramp : MonoBehaviour
     }
     private IEnumerator EnemyMoveCo()
     {
+        
         yield return new WaitForSeconds(3f);
         //Destruimos el objeto
         Destroy(gameObject);
@@ -65,6 +72,7 @@ public class Tramp : MonoBehaviour
     }
    private IEnumerator EnemyRunCo()
     {
+        
         yield return new WaitForSeconds(5f);
         Destroy(gameObject);
         GameObject.Find(enemyName).GetComponent<EnemyRun>().debeHuir = true;

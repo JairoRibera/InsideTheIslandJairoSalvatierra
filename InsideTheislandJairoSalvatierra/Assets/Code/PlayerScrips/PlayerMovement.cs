@@ -27,7 +27,6 @@ public class PlayerMovement : MonoBehaviour
     float lastShoot;
     float lastTramp;
     public float cooldownTimeTramp;
-    public PickUps pUReferenece;
     private bool __isDead;
     public Bullet _bReference;
 

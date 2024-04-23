@@ -46,8 +46,8 @@ public class PickUps : MonoBehaviour
             }
             if (isPowerShoot)
             {
-                _bReference.damage = 20f;
-                _bReference.bulletSpeed = 10f;
+                _bReference.damage = 40f;
+                _bReference.bulletSpeed = 15f;
                 _isCollected = true;
                 Destroy(gameObject);
             }
