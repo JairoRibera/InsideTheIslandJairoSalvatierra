@@ -315,12 +315,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 97907563}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.19, y: -1.13, z: 0}
-  m_LocalScale: {x: 4.24, y: 4.24, z: 4.24}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.068416536, y: -0.40689927, z: 0}
+  m_LocalScale: {x: 1.5267724, y: 1.5267724, z: 1.5267724}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1900800349}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &109917479
 GameObject:
@@ -693,7 +693,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &391267845
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2198,12 +2198,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 790089283}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.19, y: -1.13, z: 0}
-  m_LocalScale: {x: 4.24, y: 4.24, z: 4.24}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.068416536, y: -0.40689927, z: 0}
+  m_LocalScale: {x: 1.5267724, y: 1.5267724, z: 1.5267724}
   m_ConstrainProportionsScale: 1
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1900800349}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &827252923
 GameObject:
@@ -2216,12 +2216,12 @@ GameObject:
   - component: {fileID: 827252925}
   - component: {fileID: 827252924}
   m_Layer: 0
-  m_Name: FondosPlaya_1 (1)
+  m_Name: nubes (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &827252924
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2283,8 +2283,8 @@ Transform:
   m_GameObject: {fileID: 827252923}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.89, y: 4.19, z: 0}
-  m_LocalScale: {x: 5.3634, y: 5.3634, z: 5.3634}
+  m_LocalPosition: {x: -0.22, y: 3.41, z: 0}
+  m_LocalScale: {x: -4.724083, y: 4.724083, z: 4.724083}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3091,12 +3091,12 @@ GameObject:
   - component: {fileID: 1371058320}
   - component: {fileID: 1371058319}
   m_Layer: 0
-  m_Name: FondosPlaya_1 (2)
+  m_Name: Nubes2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1371058319
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3137,7 +3137,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 901196655
   m_SortingLayer: 1
-  m_SortingOrder: 4
+  m_SortingOrder: 1
   m_Sprite: {fileID: -214229087, guid: 5f130d98d28ddb34d88323adf1e91551, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3158,8 +3158,8 @@ Transform:
   m_GameObject: {fileID: 1371058318}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.02, y: 2.46, z: 0}
-  m_LocalScale: {x: 5.3634, y: 5.3634, z: 5.3634}
+  m_LocalPosition: {x: 3.95, y: 3.45, z: 0}
+  m_LocalScale: {x: 3.6401393, y: 3.6401393, z: 3.6401393}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3732,12 +3732,12 @@ GameObject:
   - component: {fileID: 1751882072}
   - component: {fileID: 1751882071}
   m_Layer: 0
-  m_Name: FondosPlaya_1
+  m_Name: Nubes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1751882071
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3778,7 +3778,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 901196655
   m_SortingLayer: 1
-  m_SortingOrder: 4
+  m_SortingOrder: 2
   m_Sprite: {fileID: -214229087, guid: 5f130d98d28ddb34d88323adf1e91551, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -3799,8 +3799,8 @@ Transform:
   m_GameObject: {fileID: 1751882070}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.96, y: 4.39, z: 0}
-  m_LocalScale: {x: 5.3634, y: 5.3634, z: 5.3634}
+  m_LocalPosition: {x: -7.12, y: 3.03, z: 0}
+  m_LocalScale: {x: 2.924662, y: 2.924662, z: 2.924662}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3995,6 +3995,39 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1900800348
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1900800349}
+  m_Layer: 0
+  m_Name: Middle
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1900800349
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900800348}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.7771, y: 2.7771, z: 2.7771}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 790089285}
+  - {fileID: 97907565}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1924056147
 GameObject:
   m_ObjectHideFlags: 0
@@ -5754,9 +5787,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 1953766908}
     m_Modifications:
     - target: {fileID: 4404282865591702032, guid: 520ccb2beb67fe04b9df93f419595e06, type: 3}
+      propertyPath: nubes
+      value: 
+      objectReference: {fileID: 1751882072}
+    - target: {fileID: 4404282865591702032, guid: 520ccb2beb67fe04b9df93f419595e06, type: 3}
       propertyPath: target
       value: 
       objectReference: {fileID: 353689017}
+    - target: {fileID: 4404282865591702032, guid: 520ccb2beb67fe04b9df93f419595e06, type: 3}
+      propertyPath: middle1
+      value: 
+      objectReference: {fileID: 1900800349}
+    - target: {fileID: 4404282865591702032, guid: 520ccb2beb67fe04b9df93f419595e06, type: 3}
+      propertyPath: middle2
+      value: 
+      objectReference: {fileID: 720428929}
+    - target: {fileID: 4404282865591702032, guid: 520ccb2beb67fe04b9df93f419595e06, type: 3}
+      propertyPath: middle3
+      value: 
+      objectReference: {fileID: 1697403096}
     - target: {fileID: 4404282865591702032, guid: 520ccb2beb67fe04b9df93f419595e06, type: 3}
       propertyPath: farBackground
       value: 
@@ -6024,8 +6073,7 @@ SceneRoots:
   - {fileID: 2696681618654363386}
   - {fileID: 2020631030}
   - {fileID: 1154789282}
-  - {fileID: 790089285}
-  - {fileID: 97907565}
+  - {fileID: 1900800349}
   - {fileID: 720428929}
   - {fileID: 89810560}
   - {fileID: 1697403096}
