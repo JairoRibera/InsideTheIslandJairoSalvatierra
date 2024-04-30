@@ -4810,6 +4810,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: escenaPrevia
       objectReference: {fileID: 0}
+    - target: {fileID: 3838466142532205304, guid: 0db472e533ccac145866ff28febff026, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8944956729719250646, guid: 0db472e533ccac145866ff28febff026, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5797,7 +5801,7 @@ PrefabInstance:
     - target: {fileID: 4404282865591702032, guid: 520ccb2beb67fe04b9df93f419595e06, type: 3}
       propertyPath: middle1
       value: 
-      objectReference: {fileID: 1900800349}
+      objectReference: {fileID: 1697403096}
     - target: {fileID: 4404282865591702032, guid: 520ccb2beb67fe04b9df93f419595e06, type: 3}
       propertyPath: middle2
       value: 
@@ -5805,7 +5809,7 @@ PrefabInstance:
     - target: {fileID: 4404282865591702032, guid: 520ccb2beb67fe04b9df93f419595e06, type: 3}
       propertyPath: middle3
       value: 
-      objectReference: {fileID: 1697403096}
+      objectReference: {fileID: 1900800349}
     - target: {fileID: 4404282865591702032, guid: 520ccb2beb67fe04b9df93f419595e06, type: 3}
       propertyPath: farBackground
       value: 
