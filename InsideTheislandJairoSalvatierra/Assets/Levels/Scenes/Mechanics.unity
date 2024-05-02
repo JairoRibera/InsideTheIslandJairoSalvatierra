@@ -1589,7 +1589,7 @@ PrefabInstance:
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5822239645894955814, guid: cb6d4438ea0278646b3927cce2e490dc, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2932329439854857013}
+      addedObject: {fileID: 969409148}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb6d4438ea0278646b3927cce2e490dc, type: 3}
 --- !u!4 &525989663 stripped
@@ -2297,6 +2297,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &969409147
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 969409148}
+  m_Layer: 6
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &969409148
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 969409147}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.11, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 525989663}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &978411764
 GameObject:
   m_ObjectHideFlags: 0
@@ -2695,7 +2726,7 @@ SpriteRenderer:
   m_Size: {x: 35, y: 32.5}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1154789282
@@ -4376,7 +4407,7 @@ SpriteRenderer:
   m_Size: {x: 2.4, y: 2.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &2020631030
@@ -5308,27 +5339,27 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 525989663}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 266178292329131350, guid: 4da211729d4759a459e74af5c7678d2e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.09615385
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 266178292329131350, guid: 4da211729d4759a459e74af5c7678d2e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.09615385
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 266178292329131350, guid: 4da211729d4759a459e74af5c7678d2e, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.09615385
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 266178292329131350, guid: 4da211729d4759a459e74af5c7678d2e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.0096151
+      value: 6.19
       objectReference: {fileID: 0}
     - target: {fileID: 266178292329131350, guid: 4da211729d4759a459e74af5c7678d2e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.028846126
+      value: -2.98
       objectReference: {fileID: 0}
     - target: {fileID: 266178292329131350, guid: 4da211729d4759a459e74af5c7678d2e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5375,11 +5406,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4da211729d4759a459e74af5c7678d2e, type: 3}
---- !u!4 &2932329439854857013 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 266178292329131350, guid: 4da211729d4759a459e74af5c7678d2e, type: 3}
-  m_PrefabInstance: {fileID: 2932329439854857012}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2995531236360304018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6117,6 +6143,7 @@ SceneRoots:
   - {fileID: 2696681618654363386}
   - {fileID: 2020631030}
   - {fileID: 1154789282}
+  - {fileID: 2932329439854857012}
   - {fileID: 1900800349}
   - {fileID: 720428929}
   - {fileID: 89810560}
