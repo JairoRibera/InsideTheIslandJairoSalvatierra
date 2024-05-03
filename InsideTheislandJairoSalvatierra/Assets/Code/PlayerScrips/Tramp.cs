@@ -23,7 +23,6 @@ public class Tramp : MonoBehaviour
             collision.gameObject.GetComponent<EnemiesController>().rB.velocity = Vector2.zero;
             //Hacemos que la variable enemyName sea el nombre que esté en colision con la trampa
             enemyName = collision.gameObject.name;
-            collision.gameObject.GetComponent<EnemyDeath>().estaVivo();
             //Iniciamos la Corrutina
             StartCoroutine(EnemyMoveCo());
             
@@ -45,7 +44,6 @@ public class Tramp : MonoBehaviour
             collision.gameObject.GetComponent<EnemyRun>().debeHuir = false;
             collision.gameObject.GetComponent<EnemyRun>().enemySpeed = 0f;
             enemyName = collision.gameObject.name;
-            collision.gameObject.GetComponent<EnemyDeath>().estaVivo();
             StartCoroutine(EnemyRunCo());
 
 
@@ -53,12 +51,31 @@ public class Tramp : MonoBehaviour
         }
 
     }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy") )
+        {
+           
+            collision.GetComponent<EnemiesController>().canMove = true;
+            collision.GetComponent<EnemiesController>().moveSpeed = 15f;
+        }
+        if (collision.CompareTag("Enemy2"))
+        {
+            collision.GetComponent<EnemyPersecution>().debePerseguir = true;
+            collision.GetComponent<EnemyPersecution>().enemySpeed = 10f;
+        }
+        if (collision.CompareTag("EnemyRun"))
+        {
+            collision.GetComponent<EnemyRun>().debeHuir = true;
+            collision.GetComponent<EnemyRun>().enemySpeed = 5f;
+        }
+    }
     private IEnumerator EnemyPersecutionCo()
     {
         yield return new WaitForSeconds(4f);
         Destroy(gameObject);
-        GameObject.Find(enemyName).GetComponent<EnemyPersecution>().debePerseguir = true;
-        GameObject.Find(enemyName).GetComponent<EnemyPersecution>().enemySpeed = 10f;
+        //GameObject.Find(enemyName).GetComponent<EnemyPersecution>().debePerseguir = true;
+        //GameObject.Find(enemyName).GetComponent<EnemyPersecution>().enemySpeed = 10f;
     }
     private IEnumerator EnemyMoveCo()
     {
@@ -67,16 +84,16 @@ public class Tramp : MonoBehaviour
         //Destruimos el objeto
         Destroy(gameObject);
         //buscamos el objeto con el nombre de la variable y hacemos que pueda moverse
-        GameObject.Find(enemyName).GetComponent<EnemiesController>().canMove = true;
-        GameObject.Find(enemyName).GetComponent<EnemiesController>().moveSpeed = 15f;
+        //GameObject.Find(enemyName).GetComponent<EnemiesController>().canMove = true;
+        //GameObject.Find(enemyName).GetComponent<EnemiesController>().moveSpeed = 15f;
     }
    private IEnumerator EnemyRunCo()
     {
         
         yield return new WaitForSeconds(5f);
         Destroy(gameObject);
-        GameObject.Find(enemyName).GetComponent<EnemyRun>().debeHuir = true;
-        GameObject.Find(enemyName).GetComponent<EnemyRun>().enemySpeed = 5f;
+        //GameObject.Find(enemyName).GetComponent<EnemyRun>().debeHuir = true;
+        //GameObject.Find(enemyName).GetComponent<EnemyRun>().enemySpeed = 5f;
 
     } 
     private IEnumerator EliminateTramp()
