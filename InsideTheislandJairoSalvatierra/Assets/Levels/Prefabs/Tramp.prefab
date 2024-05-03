@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 8946453043918615423}
   - component: {fileID: 3779728035666085340}
   - component: {fileID: 6673792973584802686}
-  - component: {fileID: 3545359521544687340}
   - component: {fileID: 5661197602964658502}
+  - component: {fileID: 7572079839491928328}
   m_Layer: 0
   m_Name: Tramp
   m_TagString: Untagged
@@ -114,7 +114,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!61 &3545359521544687340
+--- !u!114 &5661197602964658502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7746099944647808515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36f0d708ecf71e642b2925d0c85f8312, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 6673792973584802686}
+  isLife: 0
+--- !u!61 &7572079839491928328
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,16 +173,3 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &5661197602964658502
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7746099944647808515}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 36f0d708ecf71e642b2925d0c85f8312, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rb: {fileID: 6673792973584802686}

@@ -8,10 +8,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/Scenes/InitialLevel.unity
     guid: 68d0f626e6b1b384da942bceca313688
-  - enabled: 1
-    path: Assets/Levels/Scenes/BeachLevels/BeachLevel.unity
-    guid: 23b6fd66d5f3b434480fd05dc6e8b4ae
-  - enabled: 1
-    path: Assets/Levels/Scenes/BeachLevels/Beach2.unity
-    guid: 761303b091f2795468a61ebc8f3b0e2f
   m_configObjects: {}
