@@ -22,7 +22,7 @@ public class GeneradorObjetos : MonoBehaviour
     }
     public IEnumerator GenerarItemCo()
     {
-        yield return new WaitForSeconds(0.75f);
+        yield return new WaitForSeconds(1f);
         InstantiatePluma();
     }
     public void InstantiatePluma()

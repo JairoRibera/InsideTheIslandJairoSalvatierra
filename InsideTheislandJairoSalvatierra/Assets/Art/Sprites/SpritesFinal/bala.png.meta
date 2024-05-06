@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: adbd973080bf4e84f9642d4d516d66d2
+guid: 43ca30449911c9a4ca54958d845e4c73
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -108,7 +108,49 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: bala_0
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 664
+        width: 99
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4523759ec983b7642a0368c56e579c84
+      internalID: 306122868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: bala_1
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 637
+        width: 80
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e8a666370bfe8d45b9b177cf5c6b041
+      internalID: -224127308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +161,9 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bala_0: 306122868
+      bala_1: -224127308
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
