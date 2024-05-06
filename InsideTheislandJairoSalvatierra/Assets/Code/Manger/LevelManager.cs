@@ -11,7 +11,7 @@ public class LevelManager : MonoBehaviour
     private CheckPointController _cReference;
     private PlayerHealthController _pHReference;
     private UIController _uIReference;
-
+    public int coinCollected;
     // Start is called before the first frame update
     void Start()
     {

@@ -10,11 +10,13 @@ public class UIController : MonoBehaviour
     public Sprite heartFull, heartEmpty;
     private PlayerHealthController _pHReference;
     public LevelManager _lMReference;
+    public TextMeshProUGUI coinText;
     // Start is called before the first frame update
     void Start()
     {
         _pHReference = GameObject.Find("Player").GetComponent<PlayerHealthController>();
         //_lMReference = GameObject.Find("LevelManager").GetComponent<LevelManager>();
+        UpdateCoinCount();
     }
     public void UpdateHealthDisplay()
     {
@@ -47,6 +49,11 @@ public class UIController : MonoBehaviour
                 break;
         }
     }
+    public void UpdateCoinCount()
+    {
+        coinText.text = _lMReference.coinCollected.ToString();
+    }
+
     
 }
 

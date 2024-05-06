@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 90
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -114,9 +114,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 192
-        height: 1080
+        y: 951
+        width: 96
+        height: 129
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,10 +134,10 @@ TextureImporter:
       name: Castle -Background  Layer 2_1
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
-        width: 192
-        height: 1080
+        x: 96
+        y: 951
+        width: 96
+        height: 129
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,8 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16d8aee31563aaf4fbd12cebbf673f84
-      internalID: 1657400940
+      spriteID: a839c1dcb2073a648b84d77ee825550f
+      internalID: -1015855289
       vertices: []
       indices: 
       edges: []
@@ -155,10 +155,10 @@ TextureImporter:
       name: Castle -Background  Layer 2_2
       rect:
         serializedVersion: 2
-        x: 384
-        y: 0
-        width: 192
-        height: 1080
+        x: 192
+        y: 951
+        width: 96
+        height: 129
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,8 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c5414e1eda3f4c14fbf609fcf01f167e
-      internalID: -836818043
+      spriteID: 5bf9d9baabccf404d8cbb35d44ef951d
+      internalID: 2128250846
       vertices: []
       indices: 
       edges: []
@@ -176,10 +176,10 @@ TextureImporter:
       name: Castle -Background  Layer 2_3
       rect:
         serializedVersion: 2
-        x: 576
-        y: 0
-        width: 192
-        height: 1080
+        x: 288
+        y: 951
+        width: 96
+        height: 129
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,8 +187,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae6da4841b7f54c4993a95ff067272ae
-      internalID: -1953025994
+      spriteID: 133a1bf4711d22649bcc195e2f37d8b5
+      internalID: 1147598317
       vertices: []
       indices: 
       edges: []
@@ -197,10 +197,10 @@ TextureImporter:
       name: Castle -Background  Layer 2_4
       rect:
         serializedVersion: 2
-        x: 768
-        y: 0
-        width: 192
-        height: 1080
+        x: 384
+        y: 951
+        width: 96
+        height: 129
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,8 +208,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91c1b6f87c0b0ee43b05fcae6579659a
-      internalID: -330098621
+      spriteID: b8148ab247dff8f4bb133f62f31ae359
+      internalID: -2028049781
       vertices: []
       indices: 
       edges: []
@@ -218,10 +218,10 @@ TextureImporter:
       name: Castle -Background  Layer 2_5
       rect:
         serializedVersion: 2
-        x: 960
-        y: 0
-        width: 192
-        height: 1080
+        x: 480
+        y: 951
+        width: 96
+        height: 129
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,8 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b7fa779ff289c84f94178ef95632e74
-      internalID: -1908840910
+      spriteID: cc9245afcc4f9664686aaf1dd7a01807
+      internalID: 1363932067
       vertices: []
       indices: 
       edges: []
@@ -239,10 +239,10 @@ TextureImporter:
       name: Castle -Background  Layer 2_6
       rect:
         serializedVersion: 2
-        x: 1152
-        y: 0
-        width: 192
-        height: 1080
+        x: 576
+        y: 951
+        width: 96
+        height: 129
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,8 +250,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 607b5d2220394404e8f0b9a3a86e7130
-      internalID: 848819360
+      spriteID: 0d2efa23ea7a10940ac9f0aa7e55988f
+      internalID: 25871145
       vertices: []
       indices: 
       edges: []
@@ -260,10 +260,10 @@ TextureImporter:
       name: Castle -Background  Layer 2_7
       rect:
         serializedVersion: 2
-        x: 1344
-        y: 0
-        width: 192
-        height: 1080
+        x: 672
+        y: 951
+        width: 96
+        height: 129
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9cc94e28f9511d346b5fb146658985aa
-      internalID: -1712652334
+      spriteID: 31cd4cc3268ee214cbaa0639c99e7590
+      internalID: 892594517
       vertices: []
       indices: 
       edges: []
@@ -281,10 +281,10 @@ TextureImporter:
       name: Castle -Background  Layer 2_8
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 0
-        width: 192
-        height: 1080
+        x: 768
+        y: 951
+        width: 96
+        height: 129
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -292,8 +292,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9de876d6856d16e46b848c486b945f13
-      internalID: 945562869
+      spriteID: 02fb6851b3a6dbc469d56045eef76cea
+      internalID: -557119141
       vertices: []
       indices: 
       edges: []
@@ -302,10 +302,10 @@ TextureImporter:
       name: Castle -Background  Layer 2_9
       rect:
         serializedVersion: 2
-        x: 1728
-        y: 0
-        width: 192
-        height: 1080
+        x: 864
+        y: 951
+        width: 96
+        height: 129
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,8 +313,218 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f4c372e699776e54eaaea741dc9b7a40
-      internalID: 295858177
+      spriteID: 02de6970a732523459f5c7bfab14a7ab
+      internalID: 1480767713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle -Background  Layer 2_10
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 951
+        width: 96
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0938ff08296090040a40a023cd848e2c
+      internalID: -754479634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle -Background  Layer 2_11
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 951
+        width: 96
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f566aeac8c7d3a4185cfcfaadaa28c3
+      internalID: 310837448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle -Background  Layer 2_12
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 951
+        width: 96
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcb5547ebd17f204b8f4f8b3327af03c
+      internalID: 567321006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle -Background  Layer 2_13
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 951
+        width: 96
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4798e513e04480345ba88126190f3831
+      internalID: -1618939270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle -Background  Layer 2_14
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 951
+        width: 96
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cc587812bf343947b173b0293b108cb
+      internalID: -2046962720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle -Background  Layer 2_15
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 951
+        width: 96
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a03ad811b33b274d82ed3ce657d5659
+      internalID: 1725790395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle -Background  Layer 2_16
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 951
+        width: 96
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d306b8fceef06db4da0f8442fbda1dc4
+      internalID: 325097041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle -Background  Layer 2_17
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 951
+        width: 96
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09ae251641f181b40b8437b4856fb6db
+      internalID: -2107990868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle -Background  Layer 2_18
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 951
+        width: 96
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44e12104b6b55254393ce62e9b8e9abb
+      internalID: -593946311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle -Background  Layer 2_19
+      rect:
+        serializedVersion: 2
+        x: 1824
+        y: 951
+        width: 96
+        height: 129
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64c33ec7b87404946a706e0eeaa65f64
+      internalID: 1806291477
       vertices: []
       indices: 
       edges: []
@@ -331,15 +541,25 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Castle -Background  Layer 2_0: -579655938
-      Castle -Background  Layer 2_1: 1657400940
-      Castle -Background  Layer 2_2: -836818043
-      Castle -Background  Layer 2_3: -1953025994
-      Castle -Background  Layer 2_4: -330098621
-      Castle -Background  Layer 2_5: -1908840910
-      Castle -Background  Layer 2_6: 848819360
-      Castle -Background  Layer 2_7: -1712652334
-      Castle -Background  Layer 2_8: 945562869
-      Castle -Background  Layer 2_9: 295858177
+      Castle -Background  Layer 2_1: -1015855289
+      Castle -Background  Layer 2_10: -754479634
+      Castle -Background  Layer 2_11: 310837448
+      Castle -Background  Layer 2_12: 567321006
+      Castle -Background  Layer 2_13: -1618939270
+      Castle -Background  Layer 2_14: -2046962720
+      Castle -Background  Layer 2_15: 1725790395
+      Castle -Background  Layer 2_16: 325097041
+      Castle -Background  Layer 2_17: -2107990868
+      Castle -Background  Layer 2_18: -593946311
+      Castle -Background  Layer 2_19: 1806291477
+      Castle -Background  Layer 2_2: 2128250846
+      Castle -Background  Layer 2_3: 1147598317
+      Castle -Background  Layer 2_4: -2028049781
+      Castle -Background  Layer 2_5: 1363932067
+      Castle -Background  Layer 2_6: 25871145
+      Castle -Background  Layer 2_7: 892594517
+      Castle -Background  Layer 2_8: -557119141
+      Castle -Background  Layer 2_9: 1480767713
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

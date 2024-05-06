@@ -6,7 +6,7 @@ public class PickUps : MonoBehaviour
 {
     public bool isCoin, isHeal, isPowerJump, isPowerShoot;
     private bool _isCollected;
-    private LevelManager _lMReference;
+    public LevelManager _lMReference;
     private UIController _uIReference;
     private PlayerHealthController _pHReference;
     public Bullet _bReference;
@@ -15,18 +15,21 @@ public class PickUps : MonoBehaviour
     void Start()
     {
         //_lMReference = GameObject.Find("LevelManager").GetComponent<LevelManager>();
-        //_uIReference = GameObject.Find("Canvas").GetComponent<UIController>();
+        _uIReference = GameObject.Find("Canvas").GetComponent<UIController>();
         _pHReference = GameObject.Find("Player").GetComponent<PlayerHealthController>();
         //_bReference = GameObject.Find("Bullet").GetComponent<Bullet>();
         _pMReference = GameObject.Find("Player").GetComponent<PlayerMovement>();
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.CompareTag("Player") && !_isCollected)
         {
             if (isCoin)
             {
-                
+                _lMReference.coinCollected++;
+                _uIReference.UpdateCoinCount();
+                _isCollected = true;
+                Destroy(gameObject);
             }
             if ((isHeal))
             {

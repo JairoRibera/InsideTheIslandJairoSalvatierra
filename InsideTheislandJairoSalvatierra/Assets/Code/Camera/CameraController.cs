@@ -7,7 +7,7 @@ public class CameraController : MonoBehaviour
 
     public Transform target;
     public float minHeight, maxHeight;
-    public Transform farBackground, middle1, middle2, middle3, nubes;
+    public Transform farBackground, middle1, middle2, middle3;
     private Vector2 _lastPos;
     // Start is called before the first frame update
     void Start()
@@ -24,7 +24,7 @@ public class CameraController : MonoBehaviour
         middle1.position += new Vector3(_amountToMove.x, _amountToMove.y, 0f) * .5f;
         middle2.position += new Vector3(_amountToMove.x, _amountToMove.y, 0f) * .75f;
         middle3.position += new Vector3(_amountToMove.x, _amountToMove.y, 0f) * .85f;
-        nubes.position += new Vector3(_amountToMove.x, _amountToMove.y, 0f) * .5f;
+        //nubes.position += new Vector3(_amountToMove.x, _amountToMove.y, 0f) * .5f;
         _lastPos = transform.position;
     }
 }
