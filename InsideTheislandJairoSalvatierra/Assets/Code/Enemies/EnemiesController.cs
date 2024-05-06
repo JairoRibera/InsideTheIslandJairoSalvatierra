@@ -11,6 +11,7 @@ public class EnemiesController : MonoBehaviour
     private float _moveCount, _waitCount;
     public Rigidbody2D rB;
     public bool canMove = true;
+    public Transform GeneradorObjeto;
     // Start is called before the first frame update
     void Start()
     {
@@ -56,4 +57,5 @@ public class EnemiesController : MonoBehaviour
             }
         }
     }
+
 }

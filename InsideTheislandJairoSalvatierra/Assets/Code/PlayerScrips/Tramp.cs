@@ -5,22 +5,26 @@ using UnityEngine;
 public class Tramp : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public bool isLife;
-    
-    
+    public bool isLife;    
     //Variable para nombre del enemigo
     string enemyName;
+    void Start()
+    {
+        
+    }
     public void Update()
     {
         StartCoroutine(EliminateTramp());
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (collision.CompareTag("Enemy"))
         {
             collision.transform.position = transform.position;
             collision.gameObject.GetComponent<EnemiesController>().canMove = false;
             collision.gameObject.GetComponent<EnemiesController>().rB.velocity = Vector2.zero;
+            StartCoroutine(collision.gameObject.GetComponent<GeneradorObjetos>().GenerarItemCo());
             //Hacemos que la variable enemyName sea el nombre que esté en colision con la trampa
             enemyName = collision.gameObject.name;
             //Iniciamos la Corrutina
