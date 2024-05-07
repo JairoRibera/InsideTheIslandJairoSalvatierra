@@ -24,7 +24,7 @@ public class Tramp : MonoBehaviour
             collision.transform.position = transform.position;
             collision.gameObject.GetComponent<EnemiesController>().canMove = false;
             collision.gameObject.GetComponent<EnemiesController>().rB.velocity = Vector2.zero;
-            StartCoroutine(collision.gameObject.GetComponent<GeneradorObjetos>().GenerarItemCo());
+            StartCoroutine(collision.gameObject.GetComponent<GeneradorObjetos>().GenerarItemPlumaCo());
             //Hacemos que la variable enemyName sea el nombre que esté en colision con la trampa
             enemyName = collision.gameObject.name;
             //Iniciamos la Corrutina

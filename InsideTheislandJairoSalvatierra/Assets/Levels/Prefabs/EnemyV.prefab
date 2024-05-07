@@ -80,8 +80,8 @@ SpriteRenderer:
   m_SortingLayerID: -1374523583
   m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.8107188, b: 0, a: 1}
+  m_Sprite: {fileID: -1647960932, guid: 552947a178fa1964cba2750011e26eb5, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -125,7 +125,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.65
+  m_Radius: 0.4
 --- !u!114 &4498086611757595237
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -206,7 +206,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.65
+  m_Radius: 0.5
 --- !u!1 &1027487712914181726
 GameObject:
   m_ObjectHideFlags: 0

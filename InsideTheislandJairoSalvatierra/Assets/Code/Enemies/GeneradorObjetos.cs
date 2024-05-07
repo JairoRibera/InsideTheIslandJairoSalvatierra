@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GeneradorObjetos : MonoBehaviour
 {
+    public int contador;
     public Transform pos;
     public GameObject[] listaPluma;
     //public GameObject[] listaHongo;
@@ -20,14 +21,20 @@ public class GeneradorObjetos : MonoBehaviour
     {
 
     }
-    public IEnumerator GenerarItemCo()
+    public IEnumerator GenerarItemPlumaCo()
     {
         yield return new WaitForSeconds(1f);
         InstantiatePluma();
     }
     public void InstantiatePluma()
     {
-        int n = Random.Range(0, listaPluma.Length);
-        Instantiate(listaPluma[n], pos.position, pos.transform.rotation);
+        if (contador <= 0)
+        {
+            int n = Random.Range(0, listaPluma.Length);
+            Instantiate(listaPluma[n], pos.position, pos.transform.rotation);
+            contador++;
+        }
+        else if (contador >= 1)
+            contador--;
     }
 }

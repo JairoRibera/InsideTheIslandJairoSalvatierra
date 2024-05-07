@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayerID: -1374523583
   m_SortingLayer: 6
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: 419844829, guid: 552947a178fa1964cba2750011e26eb5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -200,18 +200,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.21133333}
+  m_Offset: {x: 0, y: -0.91}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1033334, y: 2.2203984}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 0.2}
   m_EdgeRadius: 0
 --- !u!61 &3454170649311964099
 BoxCollider2D:
@@ -245,18 +245,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.21133333}
+  m_Offset: {x: -0.061976433, y: -0.13573444}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
-    oldSize: {x: 1, y: 1}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.1033334, y: 2.2203984}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.67772293, y: 1.6941354}
   m_EdgeRadius: 0
 --- !u!114 &7963357583372577685
 MonoBehaviour:
@@ -270,11 +270,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2fa379560250667469600f3c5cd0ac28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  contador: 0
   pos: {fileID: 1282090561253120576}
   listaPluma:
-  - {fileID: 5174563260917369349, guid: 6851965295575cf459f881fda2fe375c, type: 3}
+  - {fileID: 7360712759210302333, guid: 4f473ddd01501fd44991835fe1d26407, type: 3}
   - {fileID: 4791411954248639888, guid: 058349e888c966f46a6974dfc0a30d8d, type: 3}
-  - {fileID: 5174563260917369349, guid: 6851965295575cf459f881fda2fe375c, type: 3}
+  - {fileID: 7360712759210302333, guid: 4f473ddd01501fd44991835fe1d26407, type: 3}
 --- !u!1 &3554007894459828470
 GameObject:
   m_ObjectHideFlags: 0
