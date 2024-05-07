@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 96c09fed0379a4a45a129f0bb49df0ef
+guid: 44de6b7ee83a0e442a59596805bd0480
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -43,7 +43,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -108,91 +108,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: FondosSuelo_0
-      rect:
-        serializedVersion: 2
-        x: 499
-        y: 436
-        width: 335
-        height: 57
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6d293385b215f944dae83008c06e940f
-      internalID: -51741280
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FondosSuelo_1
-      rect:
-        serializedVersion: 2
-        x: 744
-        y: 525
-        width: 132
-        height: 70
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: af247865dab21ee46885b169ea765b72
-      internalID: -1025244481
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FondosSuelo_2
-      rect:
-        serializedVersion: 2
-        x: 575
-        y: 459
-        width: 18
-        height: 16
-      alignment: 9
-      pivot: {x: 0.45040283, y: 0.4793345}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7f76cab99e1f04f4dba5b215f8ec161f
-      internalID: -2074185452
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: FondosSuelo_3
-      rect:
-        serializedVersion: 2
-        x: 689
-        y: 437
-        width: 5
-        height: 5
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 62f8d983b4868fa4cb6a635e2f24e83a
-      internalID: -1702064949
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -203,11 +119,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      FondosSuelo_0: -51741280
-      FondosSuelo_1: -1025244481
-      FondosSuelo_2: -2074185452
-      FondosSuelo_3: -1702064949
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
