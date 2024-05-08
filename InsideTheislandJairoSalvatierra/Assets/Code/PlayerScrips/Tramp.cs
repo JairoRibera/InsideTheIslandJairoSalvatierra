@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Tramp : MonoBehaviour
 {
-    public Rigidbody2D rb;
-    public bool isLife;    
+    //public Rigidbody2D rb;
+    public bool isLife;
+    
     //Variable para nombre del enemigo
     string enemyName;
     void Start()
@@ -21,7 +22,8 @@ public class Tramp : MonoBehaviour
 
         if (collision.CompareTag("Enemy"))
         {
-            collision.transform.position = transform.position;
+            Vector2 posEnemigo = new Vector2(transform.position.x, collision.transform.position.y);
+            collision.transform.position = posEnemigo;
             collision.gameObject.GetComponent<EnemiesController>().canMove = false;
             collision.gameObject.GetComponent<EnemiesController>().rB.velocity = Vector2.zero;
             StartCoroutine(collision.gameObject.GetComponent<GeneradorObjetos>().GenerarItemPlumaCo());
@@ -34,7 +36,8 @@ public class Tramp : MonoBehaviour
         }
         if (collision.CompareTag("Enemy2"))
         {
-            collision.transform.position = transform.position;
+            Vector2 posEnemigo = new Vector2(transform.position.x, collision.transform.position.y);
+            collision.transform.position = posEnemigo;
             collision.gameObject.GetComponent<EnemyPersecution>().debePerseguir = false;
             collision.gameObject.GetComponent<EnemyPersecution>().enemySpeed = 0f;
             enemyName = collision.gameObject.name;
@@ -44,7 +47,8 @@ public class Tramp : MonoBehaviour
         }
         if (collision.CompareTag("EnemyRun"))
         {
-            collision.transform.position = transform.position;
+            Vector2 posEnemigo = new Vector2(transform.position.x, collision.transform.position.y);
+            collision.transform.position = posEnemigo;
             collision.gameObject.GetComponent<EnemyRun>().debeHuir = false;
             collision.gameObject.GetComponent<EnemyRun>().enemySpeed = 0f;
             enemyName = collision.gameObject.name;
