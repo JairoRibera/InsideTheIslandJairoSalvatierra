@@ -193,7 +193,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 4538049122099341276}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: fc382992f1edfa847a40867524ecba24, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -235,7 +235,7 @@ Rigidbody2D:
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 2
-  m_Material: {fileID: 6200000, guid: fc382992f1edfa847a40867524ecba24, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -264,7 +264,7 @@ MonoBehaviour:
   knockbackeForce: 5
   knockbackDuration: 0.25
   moveSpeed: 7
-  _rB: {fileID: 0}
+  _rB: {fileID: 1036247955126724422}
   _isGrounded: 0
   groundPoint: {fileID: 3189392480378331909}
   whatIsGround:
@@ -281,6 +281,8 @@ MonoBehaviour:
   cooldownTime: 0.25
   cooldownTimeTramp: 1
   _bReference: {fileID: 775515616529669243, guid: fd126b58c255a6e4dbbd59da393e80f1, type: 3}
+  areaTransitionName: 
+  noMoveLenght: 0
 --- !u!114 &6987653988925517309
 MonoBehaviour:
   m_ObjectHideFlags: 0

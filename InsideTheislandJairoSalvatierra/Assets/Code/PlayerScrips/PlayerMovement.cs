@@ -29,10 +29,14 @@ public class PlayerMovement : MonoBehaviour
     public float cooldownTimeTramp;
     private bool __isDead;
     public Bullet _bReference;
+    public static PlayerMovement instance;
+    public float noMoveLenght;
+    private float noMoveCount;
 
     // Start is called before the first frame update
     void Start()
     {
+        
         _rB = GetComponent<Rigidbody2D>();
 
         
@@ -41,53 +45,88 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+       
 
-
-
-        input = Input.GetAxisRaw("Horizontal");
-        if (input != 0f)
+        if (noMoveCount <= 0 && canMove)
         {
-            if (input > 0f)
+            //_rB.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), _rB.velocity.y).normalized * moveSpeed;
+            input = Input.GetAxisRaw("Horizontal");
+            if (input != 0f)
             {
-                transform.eulerAngles = new Vector2(0, 0);
-            }
-            
-            else
-            {
-                transform.eulerAngles = new Vector2(0, 180);
-            }
-        }
-        
-        _isGrounded = Physics2D.OverlapCircle(groundPoint.position, .2f, whatIsGround);
+                if (input > 0f)
+                {
+                    transform.eulerAngles = new Vector2(0, 0);
+                }
 
-        //Si pulsamos el botón de salto
-        if (Input.GetButtonDown("Jump"))
-        {
-            //Si el jugador está en el suelo
-            if (_isGrounded)
+                else
+                {
+                    transform.eulerAngles = new Vector2(0, 180);
+                }
+            }
+
+            _isGrounded = Physics2D.OverlapCircle(groundPoint.position, .2f, whatIsGround);
+
+            ////Si pulsamos el botón de salto
+            //if (Input.GetButtonDown("Jump") && _isGrounded)
+            //{
+            //    Debug.Log("Entra aqui");
+            //    ////Si el jugador está en el suelo
+            //    //if (_isGrounded)
+            //    //{
+            //    //El jugador salta, manteniendo su velocidad en X, y aplicamos la fuerza de salto
+            //    //_rB.velocity = new Vector2(_rB.velocity.x, jumpForce);
+            //    //El jugador salta, manteniendo su velocidad en X, y aplicamos la fuerza de salto
+            //    _rB.velocity = new Vector2(_rB.velocity.x, jumpForce);
+
+            //    //}
+            //}
+
+            //Si pulsamos el botón de salto
+            if (Input.GetButtonDown("Jump"))
             {
-                //El jugador salta, manteniendo su velocidad en X, y aplicamos la fuerza de salto
-                _rB.velocity = new Vector2(_rB.velocity.x, jumpForce);
-                
+                //Si el jugador está en el suelo
+                if (_isGrounded)
+                {
+                    //El jugador salta, manteniendo su velocidad en X, y aplicamos la fuerza de salto
+                    _rB.velocity = new Vector2(_rB.velocity.x, jumpForce);
+                    ////Llamamos al método del Singleton de AudioManager que reproduce el sonido
+                    //AudioManager.audioMReference.PlaySFX(10);
+                    ////Una vez en el suelo, reactivamos la posibilidad de doble salto
+                    //_canDoubleJump = true;
+                }
+                ////Si el jugador no está en el suelo
+                //else
+                //{
+                //    //Si canDoubleJump es verdadera
+                //    if (_canDoubleJump)
+                //    {
+                //        //El jugador salta, manteniendo su velocidad en X, y aplicamos la fuerza de salto
+                //        _theRB.velocity = new Vector2(_theRB.velocity.x, jumpForce);
+                //        //Llamamos al método del Singleton de AudioManager que reproduce el sonido
+                //        AudioManager.audioMReference.PlaySFX(10);
+                //        //Hacemos que no se pueda volver a saltar de nuevo
+                //        _canDoubleJump = false;
+                //    }
+                //}
+            }
+
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                Dash();
+            }
+            if (Input.GetKeyDown(KeyCode.J))
+            {
+                putTramp();
+            }
+            if (Input.GetKeyDown(KeyCode.K))
+            {
+                bulletShoot();
+
             }
         }
+        else
+            noMoveCount -= Time.deltaTime;
 
-        if (Input.GetKeyDown(KeyCode.LeftShift))
-        {
-            Dash();
-        }
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            putTramp();
-        }
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            bulletShoot();
-            
-        }
-            
-        
     }
     private void FixedUpdate()
     {
@@ -108,7 +147,7 @@ public class PlayerMovement : MonoBehaviour
             _rB.AddForce(transform.right * dashForce, ForceMode2D.Impulse);
             StartCoroutine(CRT_CancelDash());
         }
-        
+
     }
     IEnumerator CRT_CancelDash()
     {
@@ -163,7 +202,7 @@ public class PlayerMovement : MonoBehaviour
             //StartCoroutine(CooldownCo());
             Instantiate(Tramp, trampPoint.transform.position, trampPoint.transform.rotation);
         }
-            
+
     }
 
     private void bulletShoot()
@@ -185,5 +224,10 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(20);
         jumpForce = 8f;
         _bReference.damage = 10f;
+    }
+    public void InitializaNoInput()
+    {
+        noMoveCount = noMoveLenght;
+        _rB.velocity = Vector2.zero;
     }
 }

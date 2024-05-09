@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class NextScene : MonoBehaviour
 {
+    PlayerHealthController _pH;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        _pH = GameObject.Find("Player").GetComponent<PlayerHealthController>();
     }
 
     // Update is called once per frame
@@ -26,6 +28,7 @@ public class NextScene : MonoBehaviour
     public void NextLevel()
     {
         int actualScene = SceneManager.GetActiveScene().buildIndex;
+        PlayerPrefs.SetInt("Lifes", _pH.currentHealth);
         SceneManager.LoadScene(actualScene + 1);
     }
 
