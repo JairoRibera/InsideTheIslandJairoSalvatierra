@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    public bool isComeBack;
+    public Transform comebackPos;
+    public Vector2 initialPos;
     public float waitToRespawn;
     public int coin;
     private PlayerMovement _pM;
@@ -43,4 +46,5 @@ public class LevelManager : MonoBehaviour
         yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene("MainMenu");
     }
+
 }

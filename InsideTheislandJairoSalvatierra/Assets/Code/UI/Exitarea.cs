@@ -17,6 +17,7 @@ public class Exitarea : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            //esto es para guardar el valor(solo se puede guardar valores tipo float, int y string)
             PlayerPrefs.SetString("areaTransitionNameV", areaTransitionName);
             SceneManager.LoadScene(sceneToLoad);
             
