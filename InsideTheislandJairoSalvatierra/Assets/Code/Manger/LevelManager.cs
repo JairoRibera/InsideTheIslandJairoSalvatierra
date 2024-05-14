@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class LevelManager : MonoBehaviour
 {
+    public static int escenaAnterior;
+    public int escenaPlay;
     public bool isComeBack;
     public Transform comebackPos;
     public Vector2 initialPos;
@@ -18,10 +20,15 @@ public class LevelManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        
         _pHReference = GameObject.Find("Player").GetComponent<PlayerHealthController>();
         _pM = GameObject.Find("Player").GetComponent<PlayerMovement>();
         _cReference = GameObject.Find("CheckPointController").GetComponent<CheckPointController>();
         _uIReference = GameObject.Find("Canvas").GetComponent<UIController>();
+        //if (escenaAnterior != escenaPlay)
+        //{
+        //    _pM.transform.position = comebackPos.transform.position;
+        //}
     }
     public void RespawnPlayer()
     {

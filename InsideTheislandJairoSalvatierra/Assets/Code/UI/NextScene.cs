@@ -28,8 +28,8 @@ public class NextScene : MonoBehaviour
     public void NextLevel()
     {
         int actualScene = SceneManager.GetActiveScene().buildIndex;
+        LevelManager.escenaAnterior = actualScene;
         PlayerPrefs.SetInt("Lifes", _pH.currentHealth);
         SceneManager.LoadScene(actualScene + 1);
     }
-
 }

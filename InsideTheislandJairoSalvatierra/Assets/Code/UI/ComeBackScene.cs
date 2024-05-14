@@ -30,7 +30,8 @@ public class ComeBackScene : MonoBehaviour
     public void comeBack()
     {
         int escenaActual = SceneManager.GetActiveScene().buildIndex;
+        LevelManager.escenaAnterior = escenaActual;
         SceneManager.LoadScene(escenaActual - 1);
-        _pM.transform.position = new Vector2(_lMReference.comebackPos.transform.position.x, _lMReference.comebackPos.transform.position.y);
+        
     }
 }
