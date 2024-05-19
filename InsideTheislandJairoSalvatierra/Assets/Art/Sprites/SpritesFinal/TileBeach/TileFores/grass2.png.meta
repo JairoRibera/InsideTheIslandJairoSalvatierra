@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 200
+  spritePixelsToUnits: 85
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -115,7 +115,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 288.5
+        width: 96.166664
         height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -134,9 +134,9 @@ TextureImporter:
       name: grass2_1
       rect:
         serializedVersion: 2
-        x: 288
+        x: 96
         y: 0
-        width: 288.5
+        width: 96.166664
         height: 109
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -147,6 +147,90 @@ TextureImporter:
       bones: []
       spriteID: 5b71a1891f1f5f945a93089fe183670a
       internalID: -522707137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass2_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 96.166664
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44fed2ac4ee35fc49adf1c2b0c3bd888
+      internalID: -1270041115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass2_3
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 0
+        width: 96.166664
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a0c80c30f49a7449a17e4fe61c3f496
+      internalID: 808573766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass2_4
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 0
+        width: 96.166664
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ee1bf488cc69a94e9eb305459ac03cd
+      internalID: 1612935342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: grass2_5
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 96.166664
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea2931d0ba91eb544a97341a9fc3f8a9
+      internalID: -484758752
       vertices: []
       indices: 
       edges: []
@@ -164,6 +248,10 @@ TextureImporter:
     nameFileIdTable:
       grass2_0: 1693554321
       grass2_1: -522707137
+      grass2_2: -1270041115
+      grass2_3: 808573766
+      grass2_4: 1612935342
+      grass2_5: -484758752
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
