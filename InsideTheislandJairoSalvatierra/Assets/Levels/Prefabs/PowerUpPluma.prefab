@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1753995101499004740}
   m_Layer: 0
   m_Name: PowerUpPluma
-  m_TagString: Untagged
+  m_TagString: Pluma
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,4 +137,5 @@ MonoBehaviour:
   isHeal: 0
   isPowerJump: 1
   isPowerShoot: 0
+  _lMReference: {fileID: 0}
   _bReference: {fileID: 0}

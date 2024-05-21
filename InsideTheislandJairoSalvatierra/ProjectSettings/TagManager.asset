@@ -10,6 +10,7 @@ TagManager:
   - bullet
   - EnemyRun
   - PowerUp
+  - Pluma
   layers:
   - Default
   - TransparentFX

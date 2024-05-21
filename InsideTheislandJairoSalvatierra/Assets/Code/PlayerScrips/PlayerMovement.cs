@@ -16,7 +16,7 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundPoint;
     public LayerMask whatIsGround;
     public float jumpForce;
-    public bool _canDoubleJump;
+    public bool _canDoubleJump = false;
     public GameObject Tramp;
     public Transform trampPoint;
     public bool canInteract = false;
@@ -32,6 +32,7 @@ public class PlayerMovement : MonoBehaviour
     public static PlayerMovement instance;
     public float noMoveLenght;
     private float noMoveCount;
+    public bool desbloqueado = false;
 
     // Start is called before the first frame update
     void Start()
@@ -92,21 +93,22 @@ public class PlayerMovement : MonoBehaviour
                     ////Llamamos al método del Singleton de AudioManager que reproduce el sonido
                     //AudioManager.audioMReference.PlaySFX(10);
                     ////Una vez en el suelo, reactivamos la posibilidad de doble salto
-                    //_canDoubleJump = true;
+                    _canDoubleJump = true;
                 }
+
                 ////Si el jugador no está en el suelo
                 //else
                 //{
                 //    //Si canDoubleJump es verdadera
-                //    if (_canDoubleJump)
-                //    {
-                //        //El jugador salta, manteniendo su velocidad en X, y aplicamos la fuerza de salto
-                //        _theRB.velocity = new Vector2(_theRB.velocity.x, jumpForce);
-                //        //Llamamos al método del Singleton de AudioManager que reproduce el sonido
-                //        AudioManager.audioMReference.PlaySFX(10);
-                //        //Hacemos que no se pueda volver a saltar de nuevo
-                //        _canDoubleJump = false;
-                //    }
+                if (_canDoubleJump == true && desbloqueado == true && _isGrounded == false)
+               {
+                //    //        //El jugador salta, manteniendo su velocidad en X, y aplicamos la fuerza de salto
+                  _rB.velocity = new Vector2(_rB.velocity.x, jumpForce);
+                //    //        //Llamamos al método del Singleton de AudioManager que reproduce el sonido
+                //    //        AudioManager.audioMReference.PlaySFX(10);
+                //    //        //Hacemos que no se pueda volver a saltar de nuevo
+                  _canDoubleJump = false;
+                }
                 //}
             }
 
@@ -218,16 +220,42 @@ public class PlayerMovement : MonoBehaviour
         {
             StartCoroutine(normalSJ());
         }
+        if (collision.CompareTag("Pluma"))
+        {
+            if (_canDoubleJump == true)
+            {
+                //        //El jugador salta, manteniendo su velocidad en X, y aplicamos la fuerza de salto
+                _rB.velocity = new Vector2(_rB.velocity.x, jumpForce);
+                //        //Llamamos al método del Singleton de AudioManager que reproduce el sonido
+                //        AudioManager.audioMReference.PlaySFX(10);
+                //        //Hacemos que no se pueda volver a saltar de nuevo
+                _canDoubleJump = false;
+            }
+
+        }
+
     }
     private IEnumerator normalSJ()
     {
         yield return new WaitForSeconds(20);
         jumpForce = 8f;
         _bReference.damage = 10f;
+        _canDoubleJump = false;
     }
     public void InitializaNoInput()
     {
         noMoveCount = noMoveLenght;
         _rB.velocity = Vector2.zero;
+    }
+    public void doblueJump()
+    {
+        desbloqueado = true;
+        StartCoroutine(doblesaltoCo());
+    }
+    private IEnumerator doblesaltoCo()
+    {
+        yield return new WaitForSeconds(20);
+        desbloqueado = false; 
+
     }
 }

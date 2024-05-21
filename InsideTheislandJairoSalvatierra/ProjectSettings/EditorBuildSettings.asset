@@ -15,9 +15,6 @@ EditorBuildSettings:
     path: Assets/Levels/Scenes/BeachLevel/Beach2.unity
     guid: c4846a97bf509034baa933bb44060ff3
   - enabled: 1
-    path: Assets/Levels/Scenes/BeachLevel/Beach3.unity
-    guid: f78713c6ef75b464fa66309fd383c634
-  - enabled: 1
     path: Assets/Levels/Scenes/ForestLelvels/ForestLevel.unity
     guid: 460fb5123c98df449834e04f47dc98ba
   - enabled: 1

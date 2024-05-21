@@ -43,7 +43,8 @@ public class PickUps : MonoBehaviour
             }
             if (isPowerJump)
             {
-                _pMReference.jumpForce = 15f;
+                _pMReference.doblueJump();
+                //_pMReference.jumpForce = 15f;
                 _isCollected = true;
                 Destroy(gameObject);
             }
