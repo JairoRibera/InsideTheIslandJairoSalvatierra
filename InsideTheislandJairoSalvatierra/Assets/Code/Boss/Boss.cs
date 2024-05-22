@@ -14,8 +14,15 @@ public class Boss : MonoBehaviour
     public float moveSpeed = 3f;
     public float attackCooldown = .5f;
     public bool canAttack = true;
-
-
+    public bool canMove = true;//para activar o desactivar el movimiento del boss
+    [Header("Fase 2")]
+    public float jumpForceX = 15f;
+    public float jumpForceY = 5f;
+    public bool canJumpAttack = true;
+    public float jumpAttackCooldown = .5f;
+    public int minJumpTime = 3;
+    public int maxJumpTime = 4;
+    private float jumpAttackTimer;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,13 +35,26 @@ public class Boss : MonoBehaviour
     {
         switch (phase)
         {
-            case 0:
+            case 0://Fase 1
                 MeleeAtack();
                 //va hacia el jugador y ataca melee
                 break;
-            case 1:
+            case 1://Fase 2: Puede atacar a melee o hacer el ataque salto
+                if(jumpAttackTimer > 0f)
+                {
+                    jumpAttackTimer -= Time.deltaTime;
+                }
+                else
+                {
+                    JumpAttack();
+                }
+                if(canJumpAttack == true)
+                {
+                    MeleeAtack();
+                }
+
                 break;
-            case 2:
+            case 2://Fase 3
                 break;
         }
 
@@ -42,7 +62,10 @@ public class Boss : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        ChasePlayer();
+        if(canMove == true)
+        {
+            ChasePlayer();
+        }
     }
     void ChasePlayer()
     {
@@ -82,6 +105,44 @@ public class Boss : MonoBehaviour
     {
         yield return new WaitForSeconds(attackCooldown);
         canAttack = true;
+    }
+
+    void JumpAttack()
+    {
+        if(canJumpAttack == false)
+        {
+            return;
+        }
+
+        canMove = false;
+        canJumpAttack = false;
+        if(player.position.x > transform.position.x)
+        {
+            rb.AddForce(new Vector2(jumpForceX, jumpForceY), ForceMode2D.Impulse);
+        }
+        else
+        {
+            rb.AddForce(new Vector2(-jumpForceX, jumpForceY), ForceMode2D.Impulse);
+        }
+      
+
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Ground")) => Esto es para hacer lo mismo que un CompareTag pero con una layer
+        if (collision.collider.CompareTag("Ground") == true && canJumpAttack == false)
+        {
+            anim.SetTrigger("JumpAttack");
+            StartCoroutine(CRT_JumpAttackCooldown());
+            rb.velocity = Vector2.zero;
+            jumpAttackTimer = Random.Range(minJumpTime, maxJumpTime);
+        }
+    }
+    IEnumerator CRT_JumpAttackCooldown()
+    {
+        yield return new WaitForSeconds(jumpAttackCooldown);
+        canJumpAttack = true;
+        canMove = true;
     }
     private void OnDrawGizmos()
     {
