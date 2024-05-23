@@ -169,7 +169,10 @@ public class PlayerMovement : MonoBehaviour
             //Se puede acceder a la posicion en x del objeto contra el que ha chocado usando el collision.collider
             ApplyKnockBack(collision.collider.transform.position.x);
         }
-
+        //Si el que colisiona contra el jugador es una plataforma
+        if (collision.gameObject.CompareTag("Platform"))
+            //El jugador pasa a ser hijo de la plataforma
+            transform.parent = collision.transform;
     }
     public void ApplyKnockBack(float _xPosition)
     {
@@ -233,7 +236,14 @@ public class PlayerMovement : MonoBehaviour
             }
 
         }
-
+    }
+    //Método para conocer cuando dejamos de colisionar contra un objeto
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        //Si el objeto con el que dejamos de colisionar es una plataforma
+        if (collision.gameObject.CompareTag("Platform"))
+            //El jugador deja de tener padre
+            transform.parent = null;
     }
     private IEnumerator normalSJ()
     {

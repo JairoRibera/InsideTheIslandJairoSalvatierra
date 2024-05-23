@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Levels/Scenes/ForestLelvels/ForestLevel.unity
     guid: 460fb5123c98df449834e04f47dc98ba
   - enabled: 1
+    path: Assets/Levels/Scenes/ForestLelvels/Forest2.unity
+    guid: 1b30f55e1e4de8344b53055aa2d60bda
+  - enabled: 1
     path: Assets/Levels/Scenes/CastleLevels/CastleLevel.unity
     guid: 80ba4589fec758646b904e212dfbf2e7
   - enabled: 1

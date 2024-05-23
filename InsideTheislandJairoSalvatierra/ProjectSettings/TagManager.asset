@@ -11,6 +11,7 @@ TagManager:
   - EnemyRun
   - PowerUp
   - Pluma
+  - Platform
   layers:
   - Default
   - TransparentFX

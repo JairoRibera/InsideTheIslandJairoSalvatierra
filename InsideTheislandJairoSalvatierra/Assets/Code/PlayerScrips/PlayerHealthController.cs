@@ -11,11 +11,11 @@ public class PlayerHealthController : MonoBehaviour
     private float _invencibleCounter;
     private UIController _uIReference;
     private PlayerMovement _pMReference;
-    public LevelManager _lReference;
+    private LevelManager _lReference;
     // Start is called before the first frame update
     void Start()
     {  
-        //_lReference = GameObject.Find("LevelManager").GetComponent<LevelManager>();
+        _lReference = GameObject.Find("LevelManagers").GetComponent<LevelManager>();
         _uIReference = GameObject.Find("Canvas").GetComponent<UIController>();
         _pMReference = GetComponent<PlayerMovement>();
         currentHealth = maxHealth;

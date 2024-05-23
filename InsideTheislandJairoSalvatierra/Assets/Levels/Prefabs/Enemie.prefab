@@ -112,7 +112,7 @@ MonoBehaviour:
   RightPoint: {fileID: 9095574447383380426}
   movingRight: 1
   moveTime: 3.75
-  waitTime: 0.1
+  waitTime: 0.5
   rB: {fileID: 7252990362882506035}
   canMove: 1
   GeneradorObjeto: {fileID: 1282090561253120576}
