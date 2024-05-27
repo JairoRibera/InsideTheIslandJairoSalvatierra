@@ -7,18 +7,31 @@ public class Volume : MonoBehaviour
 {
     public Slider slider;
     public float sliderValue;
-    public Image imageMute;
+    public AudioManager _aMReference;
+    //public Image imageMute;
     // Start is called before the first frame update
     void Start()
     {
-        sliderValue = PlayerPrefs.GetFloat("volumeAudio", 0.5f);
+
+        //sliderValue = PlayerPrefs.GetFloat("SliderVolumen", 0.5f);
         AudioListener.volume = slider.value;
         //CheckMute();
     }
     public void ChangeSlider(float valor)
     {
         sliderValue = valor;
-        PlayerPrefs.SetFloat("volumeAudio", sliderValue);
+        PlayerPrefs.SetFloat("SliderVolumen", sliderValue);
+        //_aMReference.bgm.volume = slider.value;
+        //_aMReference.levelEndMusic.volume = slider.value;
+        //_aMReference.bossMusic.volume = slider.value;
+        foreach (AudioSource sound in _aMReference.soundEffects)
+        {
+            sound.volume = sliderValue;
+        }
+        foreach (AudioSource sound in _aMReference.Music)
+        {
+            sound.volume = sliderValue;
+        }
         AudioListener.volume = slider.value;
         //CheckMute();
     }

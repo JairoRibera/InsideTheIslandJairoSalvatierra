@@ -7,6 +7,7 @@ public class AudioManager : MonoBehaviour
     public AudioSource[] soundEffects;
     //Referencias a la música del juego
     public AudioSource bgm, levelEndMusic, bossMusic;
+    public AudioSource[] Music;
 
     //Hacemos el Singleton de este script
     public static AudioManager audioMReference;

@@ -5,52 +5,70 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    //Referencia al gameObject menu de pausa
     public GameObject pauseMenu;
     public GameObject optionMenu;
 
-    public static bool isPaused;
+    public bool isPaused;
     // Start is called before the first frame update
-    void Start()
-    {
-        pauseMenu.SetActive(false);
-        optionMenu.SetActive(false);
-    }
+    //void Start()
+    //{
+    //    pauseMenu.SetActive(false);
+    //    optionMenu.SetActive(false);
+    //}
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        //if(Input.GetKeyDown(KeyCode.Return)|| Input.GetButtonDown(""))
+        if (Input.GetKeyDown(KeyCode.Return))
         {
-            if (isPaused)
-            {
-                ResumeGame();
-                ResumeGameFromOM();
-            }
-            else
-            {
-                PauseGame();
-            }
+            PauseGame();
+            //if (isPaused)
+            //{
+            //    ResumeGame();
+            //    ResumeGameFromOM();
+            //}
+            //else
+            //{
+            //    PauseGame();
+            //}
         }
+        //if (isPaused)
+        //    Input.GetButtonDown("ButtonA");
     }
 
     public void PauseGame()
     {
-        Cursor.visible = true;
-        pauseMenu.SetActive(true);
-        Time.timeScale = 0f;
-        isPaused = true;
+        if(isPaused)
+        {
+            isPaused = false;
+            pauseMenu.SetActive(false);
+            //Reanudamos el tiempo de juego
+            Time.timeScale = 1f;
+        }
+        else
+        {
+            isPaused = true;
+            pauseMenu.SetActive(true);
+            Time.timeScale = 0f;
+        }
+        ////Cursor.visible = true;
+        //pauseMenu.SetActive(true);
+        //Time.timeScale = 0f;
+        //isPaused = true;
     }
 
     public void ResumeGame()
     {
-        Cursor.visible = false;
+        //Cursor.visible = false;
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
     }
     public void ShowOMMenu()
     {
-        Cursor.visible = true;
+        //Cursor.visible = true;
         optionMenu.SetActive(true);
         pauseMenu.SetActive(false);
         Time.timeScale = 0f;
@@ -59,7 +77,7 @@ public class PauseMenu : MonoBehaviour
 
     public void ResumeGameFromOM()
     {
-        Cursor.visible = false;
+        //Cursor.visible = false;
         pauseMenu.SetActive(false);
         optionMenu.SetActive(false);
         Time.timeScale = 1f;
@@ -73,8 +91,12 @@ public class PauseMenu : MonoBehaviour
 
     public void GoToMainMenu()
     {
-        Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1f;
+    }
+    public void Resume()
+    {
+        PauseGame();
     }
 
     public void Quit()
