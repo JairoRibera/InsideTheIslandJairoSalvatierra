@@ -13,15 +13,15 @@ public class BrightnessController : MonoBehaviour
     void Start()
     {
         slider.value = PlayerPrefs.GetFloat("brightness, 1f");
-        panelBrightness.color = new Color(panelBrightness.color.r, panelBrightness.color.g, panelBrightness.color.b, slider.value);
-        panelBrightness2.color = new Color(panelBrightness2.color.r, panelBrightness2.color.g, panelBrightness2.color.b, slider.value);
+        //panelBrightness.color = new Color(panelBrightness.color.r, panelBrightness.color.g, panelBrightness.color.b, slider.value);
+        //panelBrightness2.color = new Color(panelBrightness2.color.r, panelBrightness2.color.g, panelBrightness2.color.b, slider.value);
     }
     public void ChangeSlider(float valor)
     {
         sliderValue = valor;
         PlayerPrefs.SetFloat("brightness", sliderValue);
-        panelBrightness.color = new Color(panelBrightness.color.r, panelBrightness.color.g, panelBrightness.color.b, slider.value);
-        panelBrightness2.color = new Color(panelBrightness2.color.r, panelBrightness2.color.g, panelBrightness2.color.b, slider.value);
+        //panelBrightness.color = new Color(panelBrightness.color.r, panelBrightness.color.g, panelBrightness.color.b, slider.value);
+        //panelBrightness2.color = new Color(panelBrightness2.color.r, panelBrightness2.color.g, panelBrightness2.color.b, slider.value);
 
     }
 }

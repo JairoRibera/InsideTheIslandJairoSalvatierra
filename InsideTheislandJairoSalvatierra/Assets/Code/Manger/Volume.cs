@@ -13,21 +13,21 @@ public class Volume : MonoBehaviour
     {
         sliderValue = PlayerPrefs.GetFloat("volumeAudio", 0.5f);
         AudioListener.volume = slider.value;
-        CheckMute();
+        //CheckMute();
     }
     public void ChangeSlider(float valor)
     {
         sliderValue = valor;
         PlayerPrefs.SetFloat("volumeAudio", sliderValue);
         AudioListener.volume = slider.value;
-        CheckMute();
+        //CheckMute();
     }
-    public void CheckMute()
-    {
-        if (sliderValue == 0)
-            imageMute.enabled = true;
-        else
-            imageMute.enabled = false;
+    //public void CheckMute()
+    //{
+    //    if (sliderValue == 0)
+    //        imageMute.enabled = true;
+    //    else
+    //        imageMute.enabled = false;
 
-    }
+    //}
 }
