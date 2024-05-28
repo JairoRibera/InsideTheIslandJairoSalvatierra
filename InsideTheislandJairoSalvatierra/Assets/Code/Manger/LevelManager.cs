@@ -11,7 +11,6 @@ public class LevelManager : MonoBehaviour
     public Transform comebackPos;
     public Vector2 initialPos;
     public float waitToRespawn;
-    public int coin;
     private PlayerMovement _pM;
     private CheckPointController _cReference;
     private PlayerHealthController _pHReference;

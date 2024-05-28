@@ -371,6 +371,10 @@ PrefabInstance:
       propertyPath: escenaPlay
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7573519897303893988, guid: 855b669414236004cb36ce93a87e97e8, type: 3}
+      propertyPath: coinCollected
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2534,7 +2538,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1084330314}
     m_Modifications:
     - target: {fileID: 906620466189602242, guid: e9f19af4cb68d474b99234ddbc2141a0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2554,15 +2558,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 906620466189602242, guid: e9f19af4cb68d474b99234ddbc2141a0, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 906620466189602242, guid: e9f19af4cb68d474b99234ddbc2141a0, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 906620466189602242, guid: e9f19af4cb68d474b99234ddbc2141a0, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 906620466189602242, guid: e9f19af4cb68d474b99234ddbc2141a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -4649,14 +4653,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1842461489}
     m_Modifications:
-    - target: {fileID: 3180779786741187479, guid: d8147b4ad7f49fb46a54fa1bcc0cf61c, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3319291065933937319, guid: d8147b4ad7f49fb46a54fa1bcc0cf61c, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4036259838896924000, guid: d8147b4ad7f49fb46a54fa1bcc0cf61c, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -4741,30 +4737,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 7441599301035690135, guid: d8147b4ad7f49fb46a54fa1bcc0cf61c, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7583324654916916663, guid: d8147b4ad7f49fb46a54fa1bcc0cf61c, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8643381002337480376, guid: d8147b4ad7f49fb46a54fa1bcc0cf61c, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 233
-      objectReference: {fileID: 0}
-    - target: {fileID: 8727563948645646944, guid: d8147b4ad7f49fb46a54fa1bcc0cf61c, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9000513229560560968, guid: d8147b4ad7f49fb46a54fa1bcc0cf61c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 5960889461268171521, guid: d8147b4ad7f49fb46a54fa1bcc0cf61c, type: 3}
-    - {fileID: 6462415304094769091, guid: d8147b4ad7f49fb46a54fa1bcc0cf61c, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8147b4ad7f49fb46a54fa1bcc0cf61c, type: 3}
@@ -5871,11 +5845,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -7937572764900719992, guid: eb8079fa0cfc2c3439d2f103fd342171, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.1033334
+      value: 2.2266667
       objectReference: {fileID: 0}
     - target: {fileID: -7937572764900719992, guid: eb8079fa0cfc2c3439d2f103fd342171, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 2.2203984
+      value: 2.1570535
       objectReference: {fileID: 0}
     - target: {fileID: 165245013699035182, guid: eb8079fa0cfc2c3439d2f103fd342171, type: 3}
       propertyPath: m_Sprite
@@ -5996,6 +5970,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1433928024}
+  - {fileID: 1336013982}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1133390522
@@ -11831,6 +11806,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f473ddd01501fd44991835fe1d26407, type: 3}
+--- !u!4 &1336013982 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 906620466189602242, guid: e9f19af4cb68d474b99234ddbc2141a0, type: 3}
+  m_PrefabInstance: {fileID: 328176042}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1359440023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15952,7 +15932,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 901196655
   m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0.03333336, y: 0.03333336, z: 0}
   m_MaxChunkCount: 16
@@ -24466,7 +24446,6 @@ SceneRoots:
   - {fileID: 1642746611}
   - {fileID: 1253334831}
   - {fileID: 1084330314}
-  - {fileID: 328176042}
   - {fileID: 1526221000}
   - {fileID: 2059024876}
   - {fileID: 449976763}
