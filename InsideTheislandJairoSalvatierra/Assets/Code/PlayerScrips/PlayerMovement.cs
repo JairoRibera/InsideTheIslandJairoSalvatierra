@@ -33,11 +33,12 @@ public class PlayerMovement : MonoBehaviour
     public float noMoveLenght;
     private float noMoveCount;
     public bool desbloqueado = false;
+    private PlayerHealthController _pHReference;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        GetComponent<PlayerHealthController>();
         _rB = GetComponent<Rigidbody2D>();
 
         
@@ -147,7 +148,9 @@ public class PlayerMovement : MonoBehaviour
             canMove = false;
             _rB.velocity = new Vector2(0, _rB.velocity.y);
             _rB.AddForce(transform.right * dashForce, ForceMode2D.Impulse);
-            StartCoroutine(CRT_CancelDash());
+                StartCoroutine(CRT_CancelDash());
+
+                
         }
 
     }
@@ -179,6 +182,7 @@ public class PlayerMovement : MonoBehaviour
         canMove = false;
         //Hacemos que la velocidad en X sea 
         _rB.velocity = new Vector2(0, _rB.velocity.y);
+
         //Dependiendo de si el objeto esta en la derecha o izquierda añadira un empujon en otra direccion
         if (transform.position.x < _xPosition)
         {
@@ -188,8 +192,12 @@ public class PlayerMovement : MonoBehaviour
         {
             _rB.AddForce(new Vector2(1, 0.75f) * knockbackeForce, ForceMode2D.Impulse);
         }
+        if (gameObject.activeSelf)
+        {
+            StartCoroutine(CRT_CancelKnockbak());
 
-        StartCoroutine(CRT_CancelKnockbak());
+        }
+
     }
 
     public IEnumerator CRT_CancelKnockbak()

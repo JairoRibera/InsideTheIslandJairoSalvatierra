@@ -47,6 +47,7 @@ public class UIController : MonoBehaviour
                 heart2.sprite = heartEmpty;
                 heart3.sprite = heartEmpty;
                 break;
+
         }
     }
     public void UpdateCoinCount()

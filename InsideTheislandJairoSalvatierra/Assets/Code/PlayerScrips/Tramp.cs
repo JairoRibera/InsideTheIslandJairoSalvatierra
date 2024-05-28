@@ -72,7 +72,7 @@ public class Tramp : MonoBehaviour
         {
            
             collision.GetComponent<EnemiesController>().canMove = true;
-            collision.GetComponent<EnemiesController>().moveSpeed = 15f;
+            collision.GetComponent<EnemiesController>().moveSpeed = 7;
             contador--;
         }
         if (collision.CompareTag("Enemy2"))
