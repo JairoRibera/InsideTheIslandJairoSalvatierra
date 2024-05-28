@@ -12,6 +12,7 @@ TagManager:
   - PowerUp
   - Pluma
   - Platform
+  - Ground
   layers:
   - Default
   - TransparentFX
