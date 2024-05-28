@@ -24,13 +24,15 @@ public class Boss : MonoBehaviour
     public int maxJumpTime = 4;
     private float jumpAttackTimer;
 
-    [Header("Fase3")]
-    public Rigidbody2D projectilPrefab;
-    public float shootForce = 15;
-    public Transform shootPoint;
-    public float shootCooldown = .5f;
-    private float shootTimer = 0;
-    public float shootDistance = 3f;//Distancia minima para disparar
+    //[Header("Fase3")]
+
+    //public Rigidbody2D projectilPrefab;
+    //public float shootForce = 15;
+    //public Transform shootPoint;
+    //public float shootCooldown = .5f;
+    //private float shootTimer = 0;
+    //public float shootDistance = 3f;
+    //Distancia minima para disparar
     // Start is called before the first frame update
     void Start()
     {
@@ -44,11 +46,15 @@ public class Boss : MonoBehaviour
         switch (phase)
         {
             case 0://Fase 1
+                Debug.Log("Fase1");
                 MeleeAtack();
                 //va hacia el jugador y ataca melee
                 break;
+                
             case 1://Fase 2: Puede atacar a melee o hacer el ataque salto
-                if(jumpAttackTimer > 0f)
+                Debug.Log("Fase2");
+
+                if (jumpAttackTimer > 0f)
                 {
                     jumpAttackTimer -= Time.deltaTime;
                 }
@@ -62,40 +68,65 @@ public class Boss : MonoBehaviour
                 }
 
                 break;
-            case 2://Fase 3
+            //case 2://Fase 3
+            //    if (jumpAttackTimer > 0f)
+            //    {
+            //        jumpAttackTimer -= Time.deltaTime;
+            //    }
+            //    else
+            //    {
+            //        JumpAttack();
+            //    }
+            //    if (canJumpAttack == true)
+            //    {
+            //        MeleeAtack();
+            //    }
+
                 //calculamos distancia entre los 2
-                float _distance = Vector2.Distance(transform.position, player.position);
-                if (_distance > shootDistance)
-                {
-                    if (shootTimer > 0f)
-                    {
-                        shootTimer -= Time.deltaTime;
-                    }
-                    else if (canJumpAttack == true)
-                    {
-                        Shoot();
-                    }
-                }
-                else
-                {
-                    if (canJumpAttack == true)
-                    {
-                        MeleeAtack();
-                    }
-                }
-                if (jumpAttackTimer > 0f)
-                {
-                    jumpAttackTimer -= Time.deltaTime;
-                }
-                else
-                {
-                    JumpAttack();
-                }
-                
-                break;
+                //float _distance = Vector2.Distance(transform.position, player.position);
+                //if (_distance > shootDistance)
+                //{
+                //    if (shootTimer > 0f)
+                //    {
+                //        shootTimer -= Time.deltaTime;
+                //    }
+                //    else if (canJumpAttack == true)
+                //    {
+                //        //Shoot();
+                //    }
+                //}
+                //else
+                //{
+                //    if (canJumpAttack == true)
+                //    {
+                //        MeleeAtack();
+                //    }
+                //}
+                //if (jumpAttackTimer > 0f)
+                //{
+                //    jumpAttackTimer -= Time.deltaTime;
+                //}
+                //else
+                //{
+                //    JumpAttack();
+                //}
+
+                //break;
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            phase = 0;
+        }
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            phase = 1;
+        }
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            phase = 2;
         }
 
-        
+
     }
     private void FixedUpdate()
     {
@@ -134,7 +165,7 @@ public class Boss : MonoBehaviour
         if(Vector2.Distance(transform.position, player.position) <= attackDistance)
         {
             anim.SetTrigger("Attack");
-            Debug.Log("Te quemo con el cigarro");
+            //Debug.Log("Te quemo con el cigarro");
             StartCoroutine(CRT_AttackCooldown());
         }
     }
@@ -182,23 +213,23 @@ public class Boss : MonoBehaviour
         canMove = true;
     }
 
-    void Shoot()
-    {
-        shootTimer = shootCooldown;
-        Rigidbody2D _projectil = Instantiate(projectilPrefab, shootPoint.position, shootPoint.rotation);
-        //calcula la dirección del personaje
-        Vector2 _dirToPlayer = player.position - transform.position;
-        //el normalize hace que la velocidad no varie independientemente de la distancia
-        _projectil.AddForce(_dirToPlayer.normalized * shootForce, ForceMode2D.Impulse);
-    }
+    //void Shoot()
+    //{
+    //    shootTimer = shootCooldown;
+    //    Rigidbody2D _projectil = Instantiate(projectilPrefab, shootPoint.position, shootPoint.rotation);
+    //    //calcula la dirección del personaje
+    //    Vector2 _dirToPlayer = player.position - transform.position;
+    //    //el normalize hace que la velocidad no varie independientemente de la distancia
+    //    _projectil.AddForce(_dirToPlayer.normalized * shootForce, ForceMode2D.Impulse);
+    //}
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, distance);
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, attackDistance);
-        Gizmos.color = Color.magenta;
-        Gizmos.DrawWireSphere(transform.position, shootDistance);
+        //Gizmos.color = Color.magenta;
+        //Gizmos.DrawWireSphere(transform.position, shootDistance);
 
     }
 }

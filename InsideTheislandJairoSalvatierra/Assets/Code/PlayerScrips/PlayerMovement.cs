@@ -34,13 +34,14 @@ public class PlayerMovement : MonoBehaviour
     private float noMoveCount;
     public bool desbloqueado = false;
     private PlayerHealthController _pHReference;
+    private Animator _anim;
 
     // Start is called before the first frame update
     void Start()
     {
         GetComponent<PlayerHealthController>();
         _rB = GetComponent<Rigidbody2D>();
-
+        _anim = GetComponent<Animator>();
         
     }
 
@@ -129,7 +130,8 @@ public class PlayerMovement : MonoBehaviour
         }
         else
             noMoveCount -= Time.deltaTime;
-
+        _anim.SetFloat("moveSpeed", Mathf.Abs(_rB.velocity.x));
+        _anim.SetBool("isGrounded", _isGrounded);
     }
     private void FixedUpdate()
     {
