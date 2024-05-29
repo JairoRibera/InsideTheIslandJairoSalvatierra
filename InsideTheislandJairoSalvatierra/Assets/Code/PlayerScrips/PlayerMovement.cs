@@ -184,13 +184,13 @@ public class PlayerMovement : MonoBehaviour
         canMove = false;
         //Hacemos que la velocidad en X sea 
         _rB.velocity = new Vector2(0, _rB.velocity.y);
-
+        Debug.Log("posenemy: "+ _xPosition + ", posPlayer:" + transform.position.x);
         //Dependiendo de si el objeto esta en la derecha o izquierda añadira un empujon en otra direccion
-        if (transform.position.x < _xPosition)
+        if (transform.position.x < _xPosition + 0.3f)
         {
             _rB.AddForce(new Vector2(-1, 0.75f) * knockbackeForce, ForceMode2D.Impulse);
         }
-        else
+        else if(transform.position.x >= _xPosition + 0.3f)
         {
             _rB.AddForce(new Vector2(1, 0.75f) * knockbackeForce, ForceMode2D.Impulse);
         }

@@ -138,7 +138,7 @@ MonoBehaviour:
   isHeal: 0
   isPowerJump: 0
   isPowerShoot: 0
-  _lMReference: {fileID: 7573519897303893988, guid: 855b669414236004cb36ce93a87e97e8, type: 3}
+  _lMReference: {fileID: 0}
   _bReference: {fileID: 0}
 --- !u!95 &928206563303255555
 Animator:

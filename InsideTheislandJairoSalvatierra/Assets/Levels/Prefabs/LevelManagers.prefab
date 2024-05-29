@@ -45,9 +45,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b026b285fecf92b48beb5188149e02df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  escenaPlay: 0
+  isComeBack: 0
   comebackPos: {fileID: 6073788998900711282}
+  initialPos: {x: 0, y: 0}
   waitToRespawn: 2
-  coin: 0
   coinCollected: 0
 --- !u!1 &8677041680425485559
 GameObject:

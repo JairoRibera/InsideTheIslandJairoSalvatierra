@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Levels/Scenes/CastleLevels/FinalBoss.unity
     guid: 889030f3a2eecb34c9caa5d88bd086b3
+  - enabled: 1
+    path: Assets/Levels/Scenes/MainMenu.unity
+    guid: a3505858e01180649afa8f05cff51e95
   m_configObjects: {}

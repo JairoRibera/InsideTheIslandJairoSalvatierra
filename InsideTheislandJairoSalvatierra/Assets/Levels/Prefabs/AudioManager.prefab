@@ -299,8 +299,8 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1910688a29258be4db3b916748f6f069, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
+  m_PlayOnAwake: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -567,6 +567,14 @@ MonoBehaviour:
   bgm: {fileID: 9127935999493327114}
   levelEndMusic: {fileID: 5539828100019383984}
   bossMusic: {fileID: 5678213524385961934}
+  Music:
+  - {fileID: 9127935999493327114}
+  - {fileID: 3288879788089897083}
+  - {fileID: 956360477830076467}
+  - {fileID: 5678213524385961934}
+  - {fileID: 6860269815731477951}
+  - {fileID: 4080289784093407117}
+  - {fileID: 5539828100019383984}
 --- !u!1 &4184395220966203141
 GameObject:
   m_ObjectHideFlags: 0

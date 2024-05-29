@@ -4,11 +4,16 @@ using UnityEngine;
 
 public class DamagePlayer : MonoBehaviour
 {
+    private float enemyPos;
+    private void Start()
+    {
+        enemyPos = transform.parent.position.x;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<PlayerHealthController>().DealWithDamage();
+            collision.GetComponent<PlayerHealthController>().DealWithDamage(enemyPos);
         }
     }
 }

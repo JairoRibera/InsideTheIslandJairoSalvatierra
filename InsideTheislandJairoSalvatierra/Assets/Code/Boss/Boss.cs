@@ -184,7 +184,9 @@ public class Boss : MonoBehaviour
 
         canMove = false;
         canJumpAttack = false;
-        if(player.position.x > transform.position.x)
+        anim.SetTrigger("JumpAttack");
+
+        if (player.position.x > transform.position.x)
         {
             rb.AddForce(new Vector2(jumpForceX, jumpForceY), ForceMode2D.Impulse);
         }
@@ -200,7 +202,7 @@ public class Boss : MonoBehaviour
         //if (collision.collider.gameObject.layer == LayerMask.NameToLayer("Ground")) => Esto es para hacer lo mismo que un CompareTag pero con una layer
         if (collision.collider.CompareTag("Ground") == true && canJumpAttack == false)
         {
-            anim.SetTrigger("JumpAttack");
+            //anim.SetTrigger("JumpAttack");
             StartCoroutine(CRT_JumpAttackCooldown());
             rb.velocity = Vector2.zero;
             jumpAttackTimer = Random.Range(minJumpTime, maxJumpTime);

@@ -30,7 +30,7 @@ public class PlayerHealthController : MonoBehaviour
             
         }
     }
-    public void DealWithDamage()
+    public void DealWithDamage(float EnemyPosX)
     {
         if(_invencibleCounter <= 0)
         {
@@ -43,7 +43,7 @@ public class PlayerHealthController : MonoBehaviour
             else
             {
                 _invencibleCounter = invencibleLength;
-                _pMReference.ApplyKnockBack(transform.position.x);
+                _pMReference.ApplyKnockBack(EnemyPosX);
             }
             _uIReference.UpdateHealthDisplay();
         }

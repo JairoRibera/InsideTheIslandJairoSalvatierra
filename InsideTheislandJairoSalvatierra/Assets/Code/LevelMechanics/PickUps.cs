@@ -14,7 +14,7 @@ public class PickUps : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //_lMReference = GameObject.Find("LevelManager").GetComponent<LevelManager>();
+        _lMReference = GameObject.Find("LevelManagers").GetComponent<LevelManager>();
         _uIReference = GameObject.Find("Canvas").GetComponent<UIController>();
         _pHReference = GameObject.Find("Player").GetComponent<PlayerHealthController>();
         //_bReference = GameObject.Find("Bullet").GetComponent<Bullet>();
