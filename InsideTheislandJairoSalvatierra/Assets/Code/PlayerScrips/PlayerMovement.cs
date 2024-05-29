@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     public bool desbloqueado = false;
     private PlayerHealthController _pHReference;
     private Animator _anim;
-
+    private bool isShoot = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -124,14 +124,15 @@ public class PlayerMovement : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.K))
             {
+                _anim.SetTrigger("shoot");
                 bulletShoot();
-
             }
         }
         else
             noMoveCount -= Time.deltaTime;
         _anim.SetFloat("moveSpeed", Mathf.Abs(_rB.velocity.x));
         _anim.SetBool("isGrounded", _isGrounded);
+        _anim.SetBool("isShoot", isShoot);
     }
     private void FixedUpdate()
     {
@@ -222,10 +223,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void bulletShoot()
     {
-        if (Time.time - lastTramp < cooldownTime)
-            return;
-        lastTramp = Time.time;
-        Instantiate(bullet, bulletPoint.transform.position, bulletPoint.rotation);
+        
+            if (Time.time - lastTramp < cooldownTime)
+                return;
+            lastTramp = Time.time;
+            Instantiate(bullet, bulletPoint.transform.position, bulletPoint.rotation);
+
+       
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -278,4 +282,5 @@ public class PlayerMovement : MonoBehaviour
         desbloqueado = false; 
 
     }
+
 }

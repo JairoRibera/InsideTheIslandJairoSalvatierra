@@ -7,7 +7,8 @@ public class DamagePlayer : MonoBehaviour
     private float enemyPos;
     private void Start()
     {
-        enemyPos = transform.parent.position.x;
+        //enemyPos = transform.parent.position.x;
+        enemyPos = transform.position.x;
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
