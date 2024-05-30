@@ -926,6 +926,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8378290373171747068, guid: d8147b4ad7f49fb46a54fa1bcc0cf61c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4057,13 +4061,21 @@ PrefabInstance:
       propertyPath: objectToSwitch
       value: 
       objectReference: {fileID: 1460261132}
+    - target: {fileID: 2306355905531554875, guid: f5a3883d381e68b4ca78967970a5fe38, type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2306355905531554875, guid: f5a3883d381e68b4ca78967970a5fe38, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -60237227
+      objectReference: {fileID: 0}
     - target: {fileID: 3887262678559442102, guid: f5a3883d381e68b4ca78967970a5fe38, type: 3}
       propertyPath: m_Name
       value: Swicth
       objectReference: {fileID: 0}
     - target: {fileID: 3887262678559442102, guid: f5a3883d381e68b4ca78967970a5fe38, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8189528468450622052, guid: f5a3883d381e68b4ca78967970a5fe38, type: 3}
       propertyPath: m_LocalPosition.x

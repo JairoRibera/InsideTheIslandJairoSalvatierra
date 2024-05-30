@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Boss : MonoBehaviour
 {
+    private BossVida _bVReference;
     public int phase = 0;
     private Animator anim;
     private Rigidbody2D rb;
@@ -38,6 +39,7 @@ public class Boss : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        _bVReference = GetComponent<BossVida>();
     }
 
     // Update is called once per frame
@@ -124,6 +126,10 @@ public class Boss : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.N))
         {
             phase = 2;
+        }
+        if(_bVReference.vida <= 25)
+        {
+            phase = 1;
         }
 
 

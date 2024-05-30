@@ -6,6 +6,11 @@ public class EnemyDeath : MonoBehaviour
 {
     public float vida;
     public bool isLife;
+    private LevelManager _lMReference;
+    private void Start()
+    {
+        _lMReference = GameObject.Find("LevelManagers").GetComponent<LevelManager>();
+    }
     //public GameObject deathEffect;
     public void damageEnemy(float damage)
     {
@@ -15,7 +20,7 @@ public class EnemyDeath : MonoBehaviour
     }
     public void EnemyDeathController()
     {
-        gameObject.SetActive(false);
+        transform.gameObject.SetActive(false);
         //Destroy(gameObject);
         //transform.gameObject.SetActive(false);
         //Instantiate(deathEffect, transform.GetChild(0).position, transform.GetChild(0).rotation);

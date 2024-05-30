@@ -7,12 +7,12 @@ public class Volume : MonoBehaviour
 {
     public Slider slider;
     public float sliderValue;
-    public AudioManager _aMReference;
+    private AudioManager _aMReference;
     //public Image imageMute;
     // Start is called before the first frame update
     void Start()
     {
-
+        _aMReference = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         //sliderValue = PlayerPrefs.GetFloat("SliderVolumen", 0.5f);
         AudioListener.volume = slider.value;
         //CheckMute();

@@ -277,7 +277,6 @@ MonoBehaviour:
   listaPluma:
   - {fileID: 7360712759210302333, guid: 4f473ddd01501fd44991835fe1d26407, type: 3}
   - {fileID: 4791411954248639888, guid: 058349e888c966f46a6974dfc0a30d8d, type: 3}
-  - {fileID: 7360712759210302333, guid: 4f473ddd01501fd44991835fe1d26407, type: 3}
 --- !u!70 &590812785301993884
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

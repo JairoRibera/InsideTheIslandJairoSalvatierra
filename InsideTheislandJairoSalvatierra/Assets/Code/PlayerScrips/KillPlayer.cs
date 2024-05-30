@@ -22,6 +22,7 @@ public class KillPlayer : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             _lMReference.RespawnPlayer();
+            _lMReference.RespawnEnemy();
         }
     }
 }

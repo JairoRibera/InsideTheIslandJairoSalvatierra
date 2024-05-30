@@ -35,7 +35,8 @@ public class PlayerMovement : MonoBehaviour
     public bool desbloqueado = false;
     private PlayerHealthController _pHReference;
     private Animator _anim;
-    private bool isShoot = false;
+    public float TiempoDisparo;
+    public float UltimoDisparo;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
         _anim = GetComponent<Animator>();
         
     }
+
 
     // Update is called once per frame
     void Update()
@@ -113,7 +115,7 @@ public class PlayerMovement : MonoBehaviour
                 }
                 //}
             }
-
+            
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 Dash();
@@ -124,15 +126,20 @@ public class PlayerMovement : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.K))
             {
-                _anim.SetTrigger("shoot");
-                bulletShoot();
+                if (Time.time > TiempoDisparo + UltimoDisparo)
+                {
+                    UltimoDisparo = Time.time;
+                    _anim.SetTrigger("shoot");
+                    Invoke(nameof(bulletShoot), TiempoDisparo);
+                }
+               
             }
         }
         else
             noMoveCount -= Time.deltaTime;
         _anim.SetFloat("moveSpeed", Mathf.Abs(_rB.velocity.x));
         _anim.SetBool("isGrounded", _isGrounded);
-        _anim.SetBool("isShoot", isShoot);
+
     }
     private void FixedUpdate()
     {
@@ -227,7 +234,8 @@ public class PlayerMovement : MonoBehaviour
             if (Time.time - lastTramp < cooldownTime)
                 return;
             lastTramp = Time.time;
-            Instantiate(bullet, bulletPoint.transform.position, bulletPoint.rotation);
+
+        Instantiate(bullet, bulletPoint.transform.position, bulletPoint.rotation);
 
        
     }
@@ -259,10 +267,10 @@ public class PlayerMovement : MonoBehaviour
             //El jugador deja de tener padre
             transform.parent = null;
     }
-    private IEnumerator normalSJ()
+    public IEnumerator normalSJ()
     {
-        yield return new WaitForSeconds(20);
-        jumpForce = 8f;
+        yield return new WaitForSeconds(7);
+        jumpForce = 8.5f;
         _bReference.damage = 10f;
         _canDoubleJump = false;
     }
@@ -278,7 +286,7 @@ public class PlayerMovement : MonoBehaviour
     }
     private IEnumerator doblesaltoCo()
     {
-        yield return new WaitForSeconds(20);
+        yield return new WaitForSeconds(7);
         desbloqueado = false; 
 
     }

@@ -51,6 +51,12 @@ MonoBehaviour:
   initialPos: {x: 0, y: 0}
   waitToRespawn: 2
   coinCollected: 0
+  horizontalEnemies: []
+  flyEnemies: []
+  generatorEnemies: []
+  pickups: []
+  enemyRespawn: 1
+  pickupRespawn: 1
 --- !u!1 &8677041680425485559
 GameObject:
   m_ObjectHideFlags: 0

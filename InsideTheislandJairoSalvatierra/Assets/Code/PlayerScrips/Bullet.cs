@@ -39,7 +39,12 @@ public class Bullet : MonoBehaviour
             collision.GetComponent<EnemyDeath>().damageEnemy(damage);
             Destroy(gameObject);
         }
-            
+        if (collision.CompareTag("Boss"))
+        {
+            collision.GetComponent<BossVida>().TomarDaño(damage);
+            Destroy(gameObject);
+        }
+
     }
 
 }

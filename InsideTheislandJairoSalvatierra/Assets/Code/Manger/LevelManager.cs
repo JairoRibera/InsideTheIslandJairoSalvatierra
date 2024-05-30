@@ -16,6 +16,11 @@ public class LevelManager : MonoBehaviour
     private PlayerHealthController _pHReference;
     private UIController _uIReference;
     public int coinCollected;
+    public GameObject[] horizontalEnemies;
+    public GameObject[] flyEnemies;
+    public GameObject[] generatorEnemies;
+    public float enemyRespawn;
+    public float pickupRespawn;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,6 +33,54 @@ public class LevelManager : MonoBehaviour
         //{
         //    _pM.transform.position = comebackPos.transform.position;
         //}
+    }
+    public void RespawnEnemy()
+    {
+        StartCoroutine(RespawnHorizontalEnemyCo());
+        StartCoroutine(RespawnFlyEnemyCo());
+        //StartCoroutine(RespawnGeneratorEnemyCo());
+    }
+
+
+    private IEnumerator RespawnHorizontalEnemyCo()
+    {
+        for (int i = 0; i < horizontalEnemies.Length; i++) //poner el nombre del array.Length
+        {
+            horizontalEnemies[i].SetActive(false);//con la i se recorre todos los elementos del array
+        }
+        for (int i = 0; i < horizontalEnemies.Length; i++)
+        {
+            horizontalEnemies[i].SetActive(true);
+        }
+
+        yield return new WaitForSeconds(enemyRespawn);
+
+    }
+    private IEnumerator RespawnFlyEnemyCo()
+    {
+        for (int i = 0; i < flyEnemies.Length; i++)
+        {
+            flyEnemies[i].SetActive(false);
+        }
+        for (int i = 0; i < flyEnemies.Length; i++)
+        {
+            flyEnemies[i].SetActive(true);
+        }
+
+        yield return new WaitForSeconds(enemyRespawn);
+    }
+    private IEnumerator RespawnGeneratorEnemyCo()
+    {
+        for (int i = 0; i < generatorEnemies.Length; i++)
+        {
+            generatorEnemies[i].SetActive(false);
+        }
+        for (int i = 0; i < flyEnemies.Length; i++)
+        {
+            generatorEnemies[i].SetActive(true);
+        }
+
+        yield return new WaitForSeconds(enemyRespawn);
     }
     public void RespawnPlayer()
     {
