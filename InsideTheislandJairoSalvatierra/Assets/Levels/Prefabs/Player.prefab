@@ -284,6 +284,8 @@ MonoBehaviour:
   _bReference: {fileID: 775515616529669243, guid: fd126b58c255a6e4dbbd59da393e80f1, type: 3}
   noMoveLenght: 0
   desbloqueado: 0
+  TiempoDisparo: 0
+  UltimoDisparo: 0
 --- !u!114 &6987653988925517309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -299,6 +301,7 @@ MonoBehaviour:
   currentHealth: 0
   maxHealth: 3
   invencibleLength: 1
+  deathEffect: {fileID: 8060511025668777448, guid: 23f5bd4a25c90ec48b60612a1dd4e985, type: 3}
 --- !u!95 &6031427574182988922
 Animator:
   serializedVersion: 5

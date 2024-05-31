@@ -13,10 +13,13 @@ public class FlyingEnemyController : MonoBehaviour
     private GameObject _player;
     public float waitAfterAttack;
     private float _attackCounter;
+    private SpriteRenderer _sR;
+
     // Start is called before the first frame update
     void Start()
     {
-        foreach(Transform p in points)
+        _sR = GetComponentInChildren<SpriteRenderer>(); 
+        foreach (Transform p in points)
         {
             p.parent = null;
         }
@@ -40,10 +43,10 @@ public class FlyingEnemyController : MonoBehaviour
                     if (currentPoint >= points.Length)
                         currentPoint = 0;
                 }
-                //if (transform.position.x < points[currentPoint].position.x) 
-                //    //_sR.flip = true
-                //else if (transform.position.x > points[currentPoint].position.x) 
-                //    //_sR.flip = false
+                if (transform.position.x < points[currentPoint].position.x)
+                    _sR.flipX = true;
+                else if (transform.position.x > points[currentPoint].position.x)
+                    _sR.flipX = false;
             }
             else
             {

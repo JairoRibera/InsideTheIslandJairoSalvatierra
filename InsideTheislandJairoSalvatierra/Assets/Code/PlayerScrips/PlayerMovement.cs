@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public bool seeLeft = true;
     public float dashForce;
     public float dashDuration = 0.25f;
     public bool canMove = true;
@@ -95,7 +96,7 @@ public class PlayerMovement : MonoBehaviour
                     //El jugador salta, manteniendo su velocidad en X, y aplicamos la fuerza de salto
                     _rB.velocity = new Vector2(_rB.velocity.x, jumpForce);
                     ////Llamamos al método del Singleton de AudioManager que reproduce el sonido
-                    //AudioManager.audioMReference.PlaySFX(10);
+                    AudioManager.audioMReference.PlaySFX(7);
                     ////Una vez en el suelo, reactivamos la posibilidad de doble salto
                     _canDoubleJump = true;
                 }
@@ -106,12 +107,9 @@ public class PlayerMovement : MonoBehaviour
                 //    //Si canDoubleJump es verdadera
                 if (_canDoubleJump == true && desbloqueado == true && _isGrounded == false)
                {
-                //    //        //El jugador salta, manteniendo su velocidad en X, y aplicamos la fuerza de salto
                   _rB.velocity = new Vector2(_rB.velocity.x, jumpForce);
-                //    //        //Llamamos al método del Singleton de AudioManager que reproduce el sonido
-                //    //        AudioManager.audioMReference.PlaySFX(10);
-                //    //        //Hacemos que no se pueda volver a saltar de nuevo
-                  _canDoubleJump = false;
+                    AudioManager.audioMReference.PlaySFX(7);
+                    _canDoubleJump = false;
                 }
                 //}
             }
@@ -126,13 +124,13 @@ public class PlayerMovement : MonoBehaviour
             }
             if (Input.GetKeyDown(KeyCode.K))
             {
-                if (Time.time > TiempoDisparo + UltimoDisparo)
-                {
-                    UltimoDisparo = Time.time;
-                    _anim.SetTrigger("shoot");
-                    Invoke(nameof(bulletShoot), TiempoDisparo);
-                }
-               
+                //if (Time.time > TiempoDisparo + UltimoDisparo)
+                //{
+                //    UltimoDisparo = Time.time;
+                //    _anim.SetTrigger("shoot");
+                //    Invoke(nameof(bulletShoot), TiempoDisparo);
+                //}
+                bulletShoot();
             }
         }
         else
@@ -192,7 +190,6 @@ public class PlayerMovement : MonoBehaviour
         canMove = false;
         //Hacemos que la velocidad en X sea 
         _rB.velocity = new Vector2(0, _rB.velocity.y);
-        Debug.Log("posenemy: "+ _xPosition + ", posPlayer:" + transform.position.x);
         //Dependiendo de si el objeto esta en la derecha o izquierda añadira un empujon en otra direccion
         if (transform.position.x < _xPosition + 0.3f)
         {
@@ -230,11 +227,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void bulletShoot()
     {
-        
-            if (Time.time - lastTramp < cooldownTime)
-                return;
-            lastTramp = Time.time;
 
+        if (Time.time - lastTramp < cooldownTime)
+            return;
+        lastTramp = Time.time;
+        AudioManager.audioMReference.PlaySFX(0);
         Instantiate(bullet, bulletPoint.transform.position, bulletPoint.rotation);
 
        

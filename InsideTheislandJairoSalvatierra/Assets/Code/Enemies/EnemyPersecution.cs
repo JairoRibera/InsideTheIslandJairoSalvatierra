@@ -9,8 +9,10 @@ public class EnemyPersecution : MonoBehaviour
     public float enemySpeed = 5f;
     public Rigidbody2D rB;
     public float distance;
+    private SpriteRenderer _sR;
     public void Start()
     {
+        _sR = GetComponent<SpriteRenderer>();
         _player = GameObject.Find("Player");
     }
     // Update is called once per frame
@@ -26,10 +28,12 @@ public class EnemyPersecution : MonoBehaviour
         if (distance > 0)
         {
             transform.localScale = new Vector3(1, 1, 1);
+
         }
         if (distance < 0)
         {
             transform.localScale = new Vector3(-1, 1, 1);
+
         }
         if (distance < 10)
         {
@@ -39,5 +43,9 @@ public class EnemyPersecution : MonoBehaviour
         {
             debePerseguir = false;
         }
+        if (transform.position.x < _player.transform.position.x)
+            _sR.flipX = true;
+        else if (transform.position.x > _player.transform.position.x)
+            _sR.flipX = false;
     }  
 }

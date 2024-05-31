@@ -29,6 +29,7 @@ public class PickUps : MonoBehaviour
                 _lMReference.coinCollected++;
                 _uIReference.UpdateCoinCount();
                 _isCollected = true;
+                AudioManager.audioMReference.PlaySFX(1);
                 Destroy(gameObject);
             }
             if ((isHeal))
@@ -37,6 +38,7 @@ public class PickUps : MonoBehaviour
                 {
                     _pHReference.HealPlayer();
                     _isCollected = true;
+                    AudioManager.audioMReference.PlaySFX(2);
                     Destroy(gameObject);
                 }
                 
@@ -46,6 +48,7 @@ public class PickUps : MonoBehaviour
                 _pMReference.doblueJump();
                 //_pMReference.jumpForce = 15f;
                 _isCollected = true;
+                AudioManager.audioMReference.PlaySFX(2);
                 Destroy(gameObject);
             }
             if (isPowerShoot)
@@ -53,6 +56,7 @@ public class PickUps : MonoBehaviour
                 _bReference.damage = 40f;
                 _bReference.bulletSpeed = 15f;
                 _isCollected = true;
+                AudioManager.audioMReference.PlaySFX(2);
                 Destroy(gameObject);
             }
 

@@ -22,6 +22,7 @@ public class Checkpoint : MonoBehaviour
         {
             _cReference.DesactivateCheckpoints();
             _sR.sprite = cpOn;
+            AudioManager.audioMReference.PlaySFX(6);
             _cReference.SetSpawnPoint(transform.position);
         }
     }

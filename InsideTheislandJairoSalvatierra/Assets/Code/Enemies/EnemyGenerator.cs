@@ -35,7 +35,7 @@ public class EnemyGenerator : MonoBehaviour
         else
             generateEnemy = false;
 
-        _anim.SetBool("GenerarEnemy", generateEnemy);
+        //_anim.SetBool("GenerarEnemy", generateEnemy);
     }
     public void GeneratorEnemy()
     {

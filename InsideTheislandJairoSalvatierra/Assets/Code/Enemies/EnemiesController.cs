@@ -12,9 +12,11 @@ public class EnemiesController : MonoBehaviour
     public Rigidbody2D rB;
     public bool canMove = true;
     public Transform GeneradorObjeto;
+    private SpriteRenderer _sR;
     // Start is called before the first frame update
     void Start()
     {
+        _sR = GetComponentInChildren<SpriteRenderer>();
         LeftPoint.parent = null;
         RightPoint.parent = null;
         _moveCount = moveTime;
@@ -31,6 +33,7 @@ public class EnemiesController : MonoBehaviour
                 if (movingRight)
                 {
                     rB.velocity = new Vector2(moveSpeed, rB.velocity.y);
+                    _sR.flipX = true;
 
                     if (transform.position.x > RightPoint.position.x)
                         movingRight = false;
@@ -38,6 +41,7 @@ public class EnemiesController : MonoBehaviour
                 else
                 {
                     rB.velocity = new Vector2(-moveSpeed, rB.velocity.y);
+                    _sR.flipX = false;
                     if (transform.position.x < LeftPoint.position.x)
                         movingRight = true;
                 }
