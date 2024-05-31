@@ -269,9 +269,15 @@ public class PlayerMovement : MonoBehaviour
     }
     public IEnumerator normalSJ()
     {
-        yield return new WaitForSeconds(7);
+        yield return new WaitForSeconds(10);
         jumpForce = 8.5f;
-        _bReference.damage = 10f;
+        _bReference.damage = 2f;
+        _canDoubleJump = false;
+    }
+    public void normalStats()
+    {
+        jumpForce = 8.5f;
+        _bReference.damage = 2f;
         _canDoubleJump = false;
     }
     public void InitializaNoInput()

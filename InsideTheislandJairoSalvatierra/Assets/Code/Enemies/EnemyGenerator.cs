@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyGenerator : MonoBehaviour
 {
+    private Animator _anim;
     public Transform point;
     public bool generateEnemy;
     public GameObject player;
@@ -17,7 +18,7 @@ public class EnemyGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       
+        _anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -27,13 +28,18 @@ public class EnemyGenerator : MonoBehaviour
         if (distance <= 10)
         {
             generateEnemy = true;
-            GeneratorEnemy();
+            
+            //GeneratorEnemy();
         }
+
         else
             generateEnemy = false;
+
+        _anim.SetBool("GenerarEnemy", generateEnemy);
     }
     public void GeneratorEnemy()
     {
+        Debug.Log("Entra");
         if (generateEnemy == true && contador < 5)
         {
             if (Time.time - lastEnemy < cooldownTime)

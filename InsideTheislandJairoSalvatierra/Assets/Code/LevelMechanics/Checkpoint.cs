@@ -5,10 +5,13 @@ using UnityEngine;
 
 public class Checkpoint : MonoBehaviour
 {
+    public Sprite cpOn, cpOff;
+    private SpriteRenderer _sR;
     private CheckPointController _cReference;
     // Start is called before the first frame update
     void Start()
     {
+        _sR = GetComponent<SpriteRenderer>();
         _cReference = transform.parent.GetComponent<CheckPointController>();
     }
 
@@ -18,11 +21,12 @@ public class Checkpoint : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             _cReference.DesactivateCheckpoints();
+            _sR.sprite = cpOn;
             _cReference.SetSpawnPoint(transform.position);
         }
     }
     public void ResetCheckpoint()
     {
-
+        _sR.sprite = cpOff;
     }
 }

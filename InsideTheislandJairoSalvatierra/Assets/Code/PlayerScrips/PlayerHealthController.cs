@@ -38,9 +38,10 @@ public class PlayerHealthController : MonoBehaviour
             if(currentHealth <= 0)
             {
                 currentHealth = 0;
-                StartCoroutine(_pMReference.normalSJ());
+                //StartCoroutine(_pMReference.normalSJ());
                 _lReference.RespawnPlayer();
                 _lReference.RespawnEnemy();
+                _pMReference.normalStats();
             }
             else
             {

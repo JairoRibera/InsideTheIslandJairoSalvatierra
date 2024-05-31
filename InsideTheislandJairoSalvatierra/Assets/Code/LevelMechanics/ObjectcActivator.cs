@@ -23,8 +23,8 @@ public class ObjectcActivator : MonoBehaviour
     }
     public void ActivateObject()
     {
-            transform.position = Vector3.MoveTowards(points[currentPoint].position, points[currentPoint].position, speed * Time.deltaTime);
-        StartCoroutine(DeactivateTrap());
+        transform.position = Vector3.MoveTowards(points[currentPoint].position, points[currentPoint].position, speed * Time.deltaTime);
+        //StartCoroutine(DeactivateTrap());
     }
     public void DesactivateObject()
     {

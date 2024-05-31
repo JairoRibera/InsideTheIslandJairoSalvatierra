@@ -27994,11 +27994,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1554601974792798552, guid: 0c2ba7eea502215428f1de7ce87c43c9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 220.6791
+      value: 220.83
       objectReference: {fileID: 0}
     - target: {fileID: 1554601974792798552, guid: 0c2ba7eea502215428f1de7ce87c43c9, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.877426
+      value: -5.91
       objectReference: {fileID: 0}
     - target: {fileID: 1554601974792798552, guid: 0c2ba7eea502215428f1de7ce87c43c9, type: 3}
       propertyPath: m_LocalPosition.z
@@ -28060,6 +28060,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 402564580}
+    - target: {fileID: 9082379039802664581, guid: 0c2ba7eea502215428f1de7ce87c43c9, type: 3}
+      propertyPath: enemyRun
+      value: 
+      objectReference: {fileID: 3695996932182759272, guid: cb6d4438ea0278646b3927cce2e490dc, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

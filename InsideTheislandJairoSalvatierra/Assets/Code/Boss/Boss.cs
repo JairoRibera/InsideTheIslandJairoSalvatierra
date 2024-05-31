@@ -115,19 +115,7 @@ public class Boss : MonoBehaviour
 
                 //break;
         }
-        if (Input.GetKeyDown(KeyCode.M))
-        {
-            phase = 0;
-        }
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            phase = 1;
-        }
-        if (Input.GetKeyDown(KeyCode.N))
-        {
-            phase = 2;
-        }
-        if(_bVReference.vida <= 25)
+        if(_bVReference.vida <= 50)
         {
             phase = 1;
         }

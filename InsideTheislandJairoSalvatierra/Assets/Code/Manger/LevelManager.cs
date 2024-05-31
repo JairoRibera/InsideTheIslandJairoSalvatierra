@@ -91,6 +91,9 @@ public class LevelManager : MonoBehaviour
         _pM.gameObject.SetActive(false);
         yield return new WaitForSeconds(waitToRespawn);
         _pM.gameObject.SetActive(true);
+        _pM.canMove = true;
+        _pM._canDoubleJump = false;
+        _pM.desbloqueado = false;
         _pM.transform.position = _cReference.spawnPoint;
         _pHReference.currentHealth = _pHReference.maxHealth;
         _uIReference.UpdateHealthDisplay();

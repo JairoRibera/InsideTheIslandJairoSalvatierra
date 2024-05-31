@@ -1050,6 +1050,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: CartelDialogo
       objectReference: {fileID: 0}
+    - target: {fileID: 1408203981109024312, guid: 8647cea42e5a5754ca93c1deb7e5d1b4, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408203981109024312, guid: 8647cea42e5a5754ca93c1deb7e5d1b4, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 901196655
+      objectReference: {fileID: 0}
     - target: {fileID: 3591017054983483429, guid: 8647cea42e5a5754ca93c1deb7e5d1b4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -62.28
@@ -3311,13 +3319,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: CartelDialogo (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1408203981109024312, guid: 8647cea42e5a5754ca93c1deb7e5d1b4, type: 3}
+      propertyPath: m_SortingLayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408203981109024312, guid: 8647cea42e5a5754ca93c1deb7e5d1b4, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 901196655
+      objectReference: {fileID: 0}
     - target: {fileID: 3591017054983483429, guid: 8647cea42e5a5754ca93c1deb7e5d1b4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -28.42
       objectReference: {fileID: 0}
     - target: {fileID: 3591017054983483429, guid: 8647cea42e5a5754ca93c1deb7e5d1b4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.43
+      value: -4.527
       objectReference: {fileID: 0}
     - target: {fileID: 3591017054983483429, guid: 8647cea42e5a5754ca93c1deb7e5d1b4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6067,52 +6083,28 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -1.9
       objectReference: {fileID: 0}
+    - target: {fileID: 6214412561125030422, guid: 7f73fbe20c752e34684163d24dc67f93, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 6214412561125030422, guid: 7f73fbe20c752e34684163d24dc67f93, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.28
+      objectReference: {fileID: 0}
     - target: {fileID: 6827323936203270722, guid: 7f73fbe20c752e34684163d24dc67f93, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7500829779687027678, guid: 7f73fbe20c752e34684163d24dc67f93, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 9513619d988b67b4db8016d6b0f1725a, type: 3}
     - target: {fileID: 7609236598047544014, guid: 7f73fbe20c752e34684163d24dc67f93, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8016545464469852401, guid: 7f73fbe20c752e34684163d24dc67f93, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7609236598047544014, guid: 7f73fbe20c752e34684163d24dc67f93, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1892848127}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f73fbe20c752e34684163d24dc67f93, type: 3}
---- !u!1 &1892848126 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7609236598047544014, guid: 7f73fbe20c752e34684163d24dc67f93, type: 3}
-  m_PrefabInstance: {fileID: 1892848125}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1892848127
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1892848126}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5faed431e40c4f444b040f12e320ef9d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1913525419
 GameObject:
   m_ObjectHideFlags: 0
