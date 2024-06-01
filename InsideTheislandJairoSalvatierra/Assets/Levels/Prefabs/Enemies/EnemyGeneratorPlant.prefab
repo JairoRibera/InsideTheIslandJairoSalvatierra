@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 7150762560604797285}
   m_Layer: 0
   m_Name: EnemyGeneratorPlant
-  m_TagString: Untagged
+  m_TagString: EnemyGeneratorPlant
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137,7 +137,7 @@ MonoBehaviour:
   generateEnemy: 0
   player: {fileID: 0}
   distance: 0
-  enemyRun: {fileID: 0}
+  enemyRun: {fileID: 3695996932182759272, guid: cb6d4438ea0278646b3927cce2e490dc, type: 3}
   debeHuir: 0
   numberOfEnemies: 1
   cooldownTime: 0
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 1580482147642429475, guid: a46df97972bf205478453c1930638a20, type: 3}
-  vida: 18
+  vida: 20
   isLife: 0
 --- !u!50 &6537049459589088773
 Rigidbody2D:

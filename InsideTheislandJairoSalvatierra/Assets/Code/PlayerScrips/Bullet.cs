@@ -44,6 +44,11 @@ public class Bullet : MonoBehaviour
             collision.GetComponent<BossVida>().TomarDaño(damage);
             Destroy(gameObject);
         }
+        if (collision.CompareTag("EnemyGeneratorPlant"))
+        {
+            collision.GetComponent<EnemyDeath>().damageEnemy(damage);
+            Destroy(gameObject);
+        }
 
     }
 

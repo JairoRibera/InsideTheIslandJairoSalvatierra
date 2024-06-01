@@ -38,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
     private Animator _anim;
     public float TiempoDisparo;
     public float UltimoDisparo;
+    public bool canShoot = true;
     // Start is called before the first frame update
     void Start()
     {
@@ -55,6 +56,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (noMoveCount <= 0 && canMove)
         {
+           
             //_rB.velocity = new Vector2(Input.GetAxisRaw("Horizontal"), _rB.velocity.y).normalized * moveSpeed;
             input = Input.GetAxisRaw("Horizontal");
             if (input != 0f)
@@ -91,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetButtonDown("Jump"))
             {
                 //Si el jugador está en el suelo
-                if (_isGrounded)
+                if (_isGrounded )
                 {
                     //El jugador salta, manteniendo su velocidad en X, y aplicamos la fuerza de salto
                     _rB.velocity = new Vector2(_rB.velocity.x, jumpForce);
@@ -99,6 +101,7 @@ public class PlayerMovement : MonoBehaviour
                     AudioManager.audioMReference.PlaySFX(7);
                     ////Una vez en el suelo, reactivamos la posibilidad de doble salto
                     _canDoubleJump = true;
+
                 }
 
                 ////Si el jugador no está en el suelo
@@ -122,16 +125,11 @@ public class PlayerMovement : MonoBehaviour
             {
                 putTramp();
             }
-            if (Input.GetKeyDown(KeyCode.K))
+            if(Input.GetButtonDown("Fire1"))
             {
-                //if (Time.time > TiempoDisparo + UltimoDisparo)
-                //{
-                //    UltimoDisparo = Time.time;
-                //    _anim.SetTrigger("shoot");
-                //    Invoke(nameof(bulletShoot), TiempoDisparo);
-                //}
                 bulletShoot();
             }
+
         }
         else
             noMoveCount -= Time.deltaTime;
@@ -224,18 +222,40 @@ public class PlayerMovement : MonoBehaviour
         }
 
     }
-
+    
     private void bulletShoot()
     {
-
+        canShoot = true;
+        //if (Input.GetButtonDown("Fire1"))
+        //{
+        //if (Time.time > TiempoDisparo + UltimoDisparo)
+        //{
+        //    UltimoDisparo = Time.time;
+        //    _anim.SetTrigger("shoot");
+        //    Invoke(nameof(bulletShoot), TiempoDisparo);
+        //}
         if (Time.time - lastTramp < cooldownTime)
+        {
+            canShoot = false;
             return;
+        }
+            
         lastTramp = Time.time;
         AudioManager.audioMReference.PlaySFX(0);
-        Instantiate(bullet, bulletPoint.transform.position, bulletPoint.rotation);
+            //_anim.SetBool("canShoot", true);
+            Instantiate(bullet, bulletPoint.transform.position, bulletPoint.rotation);
 
-       
+        //}
+        //else if (Input.GetButtonUp("Fire1"))
+        //{
+
+        //    //canShoot = false;
+        //    _anim.SetBool("canShoot", false); ;
+        //}
+
     }
+    private void EnableShoot() { canShoot = true; }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("PowerUp"))
@@ -266,7 +286,7 @@ public class PlayerMovement : MonoBehaviour
     }
     public IEnumerator normalSJ()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(15);
         jumpForce = 8.5f;
         _bReference.damage = 2f;
         _canDoubleJump = false;

@@ -78,7 +78,7 @@ public class Tramp : MonoBehaviour
         if (collision.CompareTag("Enemy2"))
         {
             collision.GetComponent<EnemyPersecution>().debePerseguir = true;
-            collision.GetComponent<EnemyPersecution>().enemySpeed = 10f;
+            collision.GetComponent<EnemyPersecution>().enemySpeed = 5;
             contador--;
         }
         if (collision.CompareTag("EnemyRun"))

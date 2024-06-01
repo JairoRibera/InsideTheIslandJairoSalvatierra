@@ -7,7 +7,7 @@ public class BossVida : MonoBehaviour
     [SerializeField] public float vida;
     [SerializeField] public float maximoVida;
     [SerializeField] private BarraDeVida barraDeVida;
-
+    public GameObject deathBoss;
     // Start is called before the first frame update
     void Start()
     {
@@ -26,6 +26,7 @@ public class BossVida : MonoBehaviour
     public void EnemyDeathController()
     {
         transform.gameObject.SetActive(false);
+        Instantiate(deathBoss, transform.position, transform.rotation);
         //Destroy(gameObject);
         //transform.gameObject.SetActive(false);
         //Instantiate(deathEffect, transform.GetChild(0).position, transform.GetChild(0).rotation);
