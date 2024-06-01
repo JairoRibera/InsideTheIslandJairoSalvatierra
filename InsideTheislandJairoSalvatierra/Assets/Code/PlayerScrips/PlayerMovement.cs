@@ -127,6 +127,7 @@ public class PlayerMovement : MonoBehaviour
             }
             if(Input.GetButtonDown("Fire1"))
             {
+                
                 bulletShoot();
             }
 
@@ -242,8 +243,8 @@ public class PlayerMovement : MonoBehaviour
             
         lastTramp = Time.time;
         AudioManager.audioMReference.PlaySFX(0);
-            //_anim.SetBool("canShoot", true);
-            Instantiate(bullet, bulletPoint.transform.position, bulletPoint.rotation);
+        _anim.SetTrigger("shoot");
+        Instantiate(bullet, bulletPoint.transform.position, bulletPoint.rotation);
 
         //}
         //else if (Input.GetButtonUp("Fire1"))
@@ -254,8 +255,6 @@ public class PlayerMovement : MonoBehaviour
         //}
 
     }
-    private void EnableShoot() { canShoot = true; }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("PowerUp"))
