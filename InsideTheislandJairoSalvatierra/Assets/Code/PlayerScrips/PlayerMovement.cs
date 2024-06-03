@@ -127,8 +127,8 @@ public class PlayerMovement : MonoBehaviour
             }
             if(Input.GetButtonDown("Fire1"))
             {
-                
-                bulletShoot();
+
+                _anim.SetTrigger("shoot");
             }
 
         }
@@ -243,7 +243,7 @@ public class PlayerMovement : MonoBehaviour
             
         lastTramp = Time.time;
         AudioManager.audioMReference.PlaySFX(0);
-        _anim.SetTrigger("shoot");
+        
         Instantiate(bullet, bulletPoint.transform.position, bulletPoint.rotation);
 
         //}
