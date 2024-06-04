@@ -27,6 +27,7 @@ public class BossVida : MonoBehaviour
     {
         panelComeBack.gameObject.SetActive(true);
         panelWin.gameObject.SetActive(true);
+        barraDeVida.gameObject.SetActive(false);
         Instantiate(deathBoss, transform.position, transform.rotation);
         AudioManager.audioMReference.PlaySFX(5);
         transform.gameObject.SetActive(false);

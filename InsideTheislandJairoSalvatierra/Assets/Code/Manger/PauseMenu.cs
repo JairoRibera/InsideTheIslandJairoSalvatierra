@@ -8,34 +8,14 @@ public class PauseMenu : MonoBehaviour
     //Referencia al gameObject menu de pausa
     public GameObject pauseMenu;
     public GameObject optionMenu;
-
     public bool isPaused;
-    // Start is called before the first frame update
-    //void Start()
-    //{
-    //    pauseMenu.SetActive(false);
-    //    optionMenu.SetActive(false);
-    //}
-
     // Update is called once per frame
     void Update()
     {
-        //if(Input.GetKeyDown(KeyCode.Return)|| Input.GetButtonDown(""))
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             PauseGame();
-            //if (isPaused)
-            //{
-            //    ResumeGame();
-            //    ResumeGameFromOM();
-            //}
-            //else
-            //{
-            //    PauseGame();
-            //}
         }
-        //if (isPaused)
-        //    Input.GetButtonDown("ButtonA");
     }
 
     public void PauseGame()
@@ -53,22 +33,16 @@ public class PauseMenu : MonoBehaviour
             pauseMenu.SetActive(true);
             Time.timeScale = 0f;
         }
-        ////Cursor.visible = true;
-        //pauseMenu.SetActive(true);
-        //Time.timeScale = 0f;
-        //isPaused = true;
     }
 
     public void ResumeGame()
     {
-        //Cursor.visible = false;
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
     }
     public void ShowOMMenu()
     {
-        //Cursor.visible = true;
         optionMenu.SetActive(true);
         pauseMenu.SetActive(false);
         Time.timeScale = 0f;
@@ -77,18 +51,11 @@ public class PauseMenu : MonoBehaviour
 
     public void ResumeGameFromOM()
     {
-        //Cursor.visible = false;
         pauseMenu.SetActive(false);
         optionMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
     }
-    //public void GoLS()
-    //{
-    //    Time.timeScale = 1f;
-    //    SceneManager.LoadScene("LevelSelector");
-    //}
-
     public void GoToMainMenu()
     {
         SceneManager.LoadScene("MainMenu");

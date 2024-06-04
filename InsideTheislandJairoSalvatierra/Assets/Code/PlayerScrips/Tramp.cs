@@ -43,7 +43,6 @@ public class Tramp : MonoBehaviour
                 collision.transform.position = posEnemigo;
                 collision.gameObject.GetComponent<EnemyPersecution>().debePerseguir = false;
                 collision.gameObject.GetComponent<EnemyPersecution>().enemySpeed = 0f;
-                StartCoroutine(collision.gameObject.GetComponent<GeneradorObjetos>().GenerarItemPlumaCo());
                 enemyName = collision.gameObject.name;
                 StartCoroutine(EnemyPersecutionCo());
                 contador++;

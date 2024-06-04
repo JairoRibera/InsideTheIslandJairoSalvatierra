@@ -48,14 +48,11 @@ public class Boss : MonoBehaviour
         switch (phase)
         {
             case 0://Fase 1
-                Debug.Log("Fase1");
                 MeleeAtack();
                 //va hacia el jugador y ataca melee
                 break;
                 
             case 1://Fase 2: Puede atacar a melee o hacer el ataque salto
-                Debug.Log("Fase2");
-
                 if (jumpAttackTimer > 0f)
                 {
                     jumpAttackTimer -= Time.deltaTime;

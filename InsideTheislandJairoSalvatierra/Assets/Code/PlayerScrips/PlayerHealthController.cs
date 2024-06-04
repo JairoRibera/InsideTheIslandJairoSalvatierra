@@ -44,6 +44,7 @@ public class PlayerHealthController : MonoBehaviour
             {
                 currentHealth = 0;
                 //StartCoroutine(_pMReference.normalSJ())
+                AudioManager.audioMReference.PlaySFX(3);
                 GameObject instance = Instantiate(deathEffect, transform.position, transform.rotation);
                 instance.GetComponent<PlayerDeathEffect>().wasSeeLeft = GetComponent<PlayerMovement>().seeLeft;
                 _lReference.RespawnPlayer();
