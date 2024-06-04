@@ -31,7 +31,13 @@ public class GeneradorObjetos : MonoBehaviour
         if (contador <= 0)
         {
             int n = Random.Range(0, listaPluma.Length);
+            if(!GetComponentInParent<EnemiesController>().movingRight)
             Instantiate(listaPluma[n], pos.position, pos.transform.rotation);
+            else
+            {
+                Vector3 newPos = new Vector3 (pos.position.x + 3.6f, pos.position.y, pos.position.z);
+                Instantiate(listaPluma[n], newPos, pos.transform.rotation);
+            }
             contador++;
         }
         else if (contador >= 1)

@@ -27,12 +27,14 @@ public class EnemyPersecution : MonoBehaviour
         }
         if (distance > 0)
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.Rotate(new Vector3(0f, 0f, 0f));
+            //transform.localScale = new Vector3(1, 1, 1);
 
         }
         if (distance < 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.Rotate(new Vector3(0f, -180f, 0f));
+            //transform.localScale = new Vector3(-1, 1, 1);
 
         }
         if (distance < 10)

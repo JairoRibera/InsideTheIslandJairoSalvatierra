@@ -8,10 +8,13 @@ public class Swicht : MonoBehaviour
     private bool _activateSwitch;
     public GameObject infoPanel;
     private PlayerMovement _pC;
+    public Sprite pOn;
+    private SpriteRenderer _sR;
     //Collider2D _trampCollider;
     // Start is called before the first frame update
     void Start()
     {
+        _sR = GetComponent<SpriteRenderer>();
         _pC = GameObject.Find("Player").GetComponent<PlayerMovement>();
         //_trampCollider = GameObject.Find("ObjectActivator").GetComponent<EdgeCollider2D>();
     }
@@ -23,6 +26,7 @@ public class Swicht : MonoBehaviour
         {
             if (objectToSwitch.GetComponent<ObjectcActivator>().isActive == false)
             {
+                _sR.sprite = pOn;
                 objectToSwitch.GetComponent<ObjectcActivator>().ActivateObject();
                 objectToSwitch.GetComponent<ObjectcActivator>().isActive = true;
                 //_trampCollider.enabled = true;

@@ -7,7 +7,7 @@ public class BossVida : MonoBehaviour
     [SerializeField] public float vida;
     [SerializeField] public float maximoVida;
     [SerializeField] private BarraDeVida barraDeVida;
-    public GameObject deathBoss;
+    public GameObject deathBoss, panelWin, panelComeBack;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,8 +25,11 @@ public class BossVida : MonoBehaviour
     }
     public void EnemyDeathController()
     {
-        transform.gameObject.SetActive(false);
+        panelComeBack.gameObject.SetActive(true);
+        panelWin.gameObject.SetActive(true);
         Instantiate(deathBoss, transform.position, transform.rotation);
+        AudioManager.audioMReference.PlaySFX(5);
+        transform.gameObject.SetActive(false);
         //Destroy(gameObject);
         //transform.gameObject.SetActive(false);
         //Instantiate(deathEffect, transform.GetChild(0).position, transform.GetChild(0).rotation);

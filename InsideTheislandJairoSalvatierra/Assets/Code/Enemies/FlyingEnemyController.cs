@@ -44,9 +44,12 @@ public class FlyingEnemyController : MonoBehaviour
                         currentPoint = 0;
                 }
                 if (transform.position.x < points[currentPoint].position.x)
-                    _sR.flipX = true;
+                    //_sR.flipX = true;
+                    transform.rotation = Quaternion.Euler(0, 180, 0);
                 else if (transform.position.x > points[currentPoint].position.x)
-                    _sR.flipX = false;
+                    //_sR.flipX = false;
+                    transform.rotation = Quaternion.Euler(0, 0, 0);
+
             }
             else
             {

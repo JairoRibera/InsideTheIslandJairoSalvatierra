@@ -54,6 +54,7 @@ public class PlayerHealthController : MonoBehaviour
             {
                 _invencibleCounter = invencibleLength;
                 _sR.color = new Color(_sR.color.r, _sR.color.g, _sR.color.b, .5f);
+                AudioManager.audioMReference.PlaySFX(4);
                 _pMReference.ApplyKnockBack(EnemyPosX);
             }
             _uIReference.UpdateHealthDisplay();

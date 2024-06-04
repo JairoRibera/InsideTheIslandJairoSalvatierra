@@ -42,6 +42,7 @@ public class EnemiesController : MonoBehaviour
                 {
                     rB.velocity = new Vector2(-moveSpeed, rB.velocity.y);
                     _sR.flipX = false;
+                    
                     if (transform.position.x < LeftPoint.position.x)
                         movingRight = true;
                 }
