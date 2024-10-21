@@ -18,9 +18,9 @@ public class EnemyPersecution : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //La distancia que debe de recorrer es la del jugador - la del enemigo
         distance = (_player.transform.position - transform.position).magnitude;
-
+        //Si la booleana se cumple, movemos con MoveToward, indicando su posicion, la del jugador, la velocidad
         if (debePerseguir == true)
         { 
             transform.position = Vector2.MoveTowards(transform.position, _player.transform.position, enemySpeed * Time.deltaTime);
@@ -45,6 +45,7 @@ public class EnemyPersecution : MonoBehaviour
         {
             debePerseguir = false;
         }
+        //Esto es para rotar el sprite del enemigo
         if (transform.position.x < _player.transform.position.x)
             _sR.flipX = true;
         else if (transform.position.x > _player.transform.position.x)

@@ -30,11 +30,14 @@ public class GeneradorObjetos : MonoBehaviour
     {
         if (contador <= 0)
         {
+            //En la lista que tenemos, hacemos que eliga un numero de forma random
             int n = Random.Range(0, listaPluma.Length);
+            //Si no se esta moviendo a la derecha instanciamos un objeto en la lista, usando la pos y rotacion del generador
             if(!GetComponentInParent<EnemiesController>().movingRight)
             Instantiate(listaPluma[n], pos.position, pos.transform.rotation);
             else
             {
+                //En caso de que este mirando a la derecha, le añadimos un valor en la pos en X
                 Vector3 newPos = new Vector3 (pos.position.x + 3.6f, pos.position.y, pos.position.z);
                 Instantiate(listaPluma[n], newPos, pos.transform.rotation);
             }
